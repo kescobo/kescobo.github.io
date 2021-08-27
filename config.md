@@ -1,7 +1,9 @@
 +++
-author = "Nelson Bighetti"
-shortauthor = "N. Bighetti"
-jobtitle = "Head of Research"
+author = "Kevin S. Bonham"
+shortauthor = "K. Bonham"
+jobtitle = "Senior Research Scientist"
+
+dateformat = "year"
 
 mintoclevel = 2
 ignore = ["node_modules/", "franklin", "franklin.pub"]
