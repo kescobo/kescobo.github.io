@@ -238,8 +238,8 @@ function show_posts(posts; byyear=false)
     curyear = year(posts[1].second)
     io = IOBuffer()
     byyear && write(io, """
-        <div class="col-12 col-lg-4"><h1>$curyear</h1></div>
-        <div class="col-12 col-lg-8">
+        <div class="col-12 col-lg-3"><h1>$curyear</h1></div>
+        <div class="col-12 col-lg-9">
         """)
     for post in posts
         if byyear && year(post.second) < curyear

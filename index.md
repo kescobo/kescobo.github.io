@@ -11,14 +11,14 @@
 
 \img{"/assets/img/person.jpg", class="avatar avatar-circle", alt="Nelson Bighetti"}
 \portrait{
-  name="Nelson Bighetti",
-  job="Professor of Artificial Intelligence",
-  link="https://www.stanford.edu/",
-  linkname="Stanford University",
-  twitter="https://twitter.com/GeorgeCushen",
-  gscholar="https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ",
-  github="https://github.com/gcushen",
-  linkedin="https://www.linkedin.com/"
+  name="Kevin Bonham",
+  job="Senior Research Scientist",
+  link="https://www.wellesley.edu",
+  linkname="Wellesley College",
+  twitter="https://twitter.com/kevbonham",
+  gscholar="https://scholar.google.co.uk/citations?user=o2fUiqwAAAAJ",
+  github="https://github.com/kescobo",
+  linkedin="https://www.linkedin.com/in/kevin-bonham-6a10b566"
 }
 @@ <!-- end of column -->
 
