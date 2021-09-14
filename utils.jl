@@ -59,7 +59,7 @@ end
     io = IOBuffer()
     write(io, html("""<h1>Biography</h1>""") * md)
     isempty(resume) || write(io, html("""
-        </br><p><i class="fas fa-download pr-1 fa-fw"></i>Download my <a href="$resume" target=_blank>resumé</a>.</p>"""))
+        </br><p><i class="fas fa-download pr-1 fa-fw"></i>Download my <a href="$resume" target=_blank>CV</a>.</p>"""))
     return String(take!(io))
 end
 

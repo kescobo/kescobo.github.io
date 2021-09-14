@@ -25,19 +25,18 @@
 <!-- RIGHT COLUMN -->
 @@col-12,col-lg-8
 
-\begin{biography}{resume="/assets/demo_resume.pdf"}
-  Nelson Bighetti is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops
-  self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+\begin{biography}{resume="/assets/CV.pdf"}
+  Kevin Bonham is a Senior Research Scientist at Wellesley College,
+  studying the human microbiome and its impact on childhood cognitive development.
+  In collaboration with Curtis Huttenhower, he is also developing a computational tool
+  to simplify the use of Gaussian Process models in the study of longitudinal microbiome data sets.
 \end{biography}
 
 \shortcv{
-  interests=["Artificial Intelligence", "Computational Linguistics", "Information Retrieval"],
+  interests=["Human Microbiome", "Computational Biology", "Gaussian Processes"],
   education=[
-    ("PhD in Artificial Intelligence, 2012", "Stanford University"),
-    ("MEng in Artificial Intelligence, 2009", "Massachusetts Institute of Technology"),
-    ("BSc in Artificial Intelligence, 2008", "Massachusetts Institute of Technology")]
+    ("PhD in Immunology, 2014", "Harvard Graduate School of Arts and Sciences"),
+    ("BSc in Biochemistry and Cell Biology, 2006", "University of California, San Diego")]
 }
 
 @@ <!-- end of column -->
@@ -51,8 +50,8 @@
 
 \sectionheading{"Skills", class="col-md-12"}
 
-\skill{"Julia", "90%", img="/assets/img/julia-dots.svg"}
-\skill{"Machine Learning", "100%", fa="chart-line"}
+\skill{"Julia", "for technical computing", img="/assets/img/julia-dots.svg"}
+\skill{"Data science", "100%", fa="chart-line"}
 \skill{"Photography", "10%", fa="camera-retro"}
 
 \end{section}
