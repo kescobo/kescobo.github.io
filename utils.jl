@@ -246,8 +246,8 @@ function show_posts(posts; byyear=false)
             curyear = year(post.second)
             write(io, """
                 </div>
-                <div class="col-12 col-lg-4"><h1>$curyear</h1></div>
-                <div class="col-12 col-lg-8">
+                <div class="col-12 col-lg-3"><h1>$curyear</h1></div>
+                <div class="col-12 col-lg-9">
                 """)
         end
         rpath = post.first
