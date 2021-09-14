@@ -142,7 +142,7 @@
 
 @@col-12,col-lg-8
 
-{{recentposts 3}}
+{{recentposts 5}}
 
 @@
 
