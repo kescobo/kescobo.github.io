@@ -9,7 +9,7 @@
 <!-- LEFT COLUMN -->
 @@col-12,col-lg-4,profile
 
-\img{"/assets/img/person.jpg", class="avatar avatar-circle", alt="Nelson Bighetti"}
+\img{"/assets/img/person.jpg", class="avatar avatar-circle", alt="Kevin Bonham"}
 \portrait{
   name="Kevin Bonham",
   job="Senior Research Scientist",
@@ -51,8 +51,8 @@
 \sectionheading{"Skills", class="col-md-12"}
 
 \skill{"Julia", "for technical computing", img="/assets/img/julia-dots.svg"}
-\skill{"Data science", "100%", fa="chart-line"}
-\skill{"Photography", "10%", fa="camera-retro"}
+\skill{"Data science", "Analysis, visualization", fa="chart-line"}
+\skill{"Software Eng", "git, unit testing, CI", fa="code-branch"}
 
 \end{section}
 
