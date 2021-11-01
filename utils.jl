@@ -116,7 +116,7 @@ end
 # experience cards
 @lx function experience(; title="", company="", descr="",
                           from="", to="", location="", active=false,
-                          first=active)
+                          first=active, last=false)
     fill = ifelse(active, "exp-fill", "")
     # elements for the vertical bar with filled/unfilled pill
     # they are assembled depending on 'first' so that they can connect.
@@ -133,6 +133,20 @@ end
           <div class=col>&nbsp;</div>
         </div>"""
 
+    line = let
+      if first && last
+        vspace * pill * vspace
+      elseif first
+        vspace * pill * vbar
+      elseif last
+        vbar * pill * vspace
+      else
+        vbar * pill * vbar
+      end
+ 
+    end
+    
+
     return html("""
         <div class="row experience">
           <div class="col-auto text-center flex-column d-none d-sm-flex">
@@ -140,7 +154,7 @@ end
               Element next to the card (pill) with a full/empty circle
               to give a visual idea of the timeline
             -->
-            $(ifelse(first, vspace * pill * vbar, vbar * pill * vspace))
+            $line
           </div>
 
           <!--

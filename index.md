@@ -124,6 +124,7 @@ Research Topics:
   location = "Boston",
   from = "2014-05-01",
   to = "2017-06-01",
+  last = true,
   descr = """
 **Masters in Immunology**  
 2014-2016
