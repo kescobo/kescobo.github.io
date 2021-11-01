@@ -132,20 +132,7 @@ end
           <div class=col>&nbsp;</div>
           <div class=col>&nbsp;</div>
         </div>"""
-
-    line = let
-      if first && last
-        vspace * pill * vspace
-      elseif first
-        vspace * pill * vbar
-      elseif last
-        vbar * pill * vspace
-      else
-        vbar * pill * vbar
-      end
  
-    end
-    
 
     return html("""
         <div class="row experience">
@@ -154,7 +141,7 @@ end
               Element next to the card (pill) with a full/empty circle
               to give a visual idea of the timeline
             -->
-            $line
+            $((first ? vspace : vbar) * pill * (last ? vspace : vbar))
           </div>
 
           <!--
