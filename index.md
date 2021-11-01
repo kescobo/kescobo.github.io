@@ -68,64 +68,82 @@
 @@col-12,col-lg-8
 
 \experience{
-  title="CEO",
-  company="GenCoin",
-  descr="""
-    Responsibilities include:
-    * Analysing
-    * Modelling
-    * Deploying
-    """,
-  from="Jan 2017",
-  to="Present",
-  location="California",
-  active=true
-  }
+  title = "Research Scientist",
+  company = "Wellesley College",
+  location = "Massachusetts",
+  from = "2018-01-01",
+  to = "",
+  active = true,
+  descr = """
+**Klepac-Ceraj Lab**
+
+Research Topics:
+
+* Human microbiome
+* Child cognitive development
+* Computational biology education
+* Diversity in STEM
+* Open source development
+"""}
+
 \experience{
-  title="Professor",
-  company="University X",
-  from="Jan 2016",
-  to="Dec 2016",
-  location="California",
-  descr="Taught electronic engineering and researched semiconductor physics."
-  }
+  title = "Postdoctoral Fellow",
+  company = "Harvard TH Chan School of Public Health",
+  location = "Boston",
+  from = "2017-05-30",
+  to = "2018-12-31",
+  descr = """
+**Huttenhower Lab**
 
-@@
+Research Topics:
 
-\end{section}
+* Human microbiome
+* Inflammatory arthritis
+* Computational biology education
+"""}
 
-<!-- -----------------------
-     ACCOMPLISHMENTS SECTION
-     ----------------------- -->
+\experience{
+  title = "Postdoctoral Fellow",
+  company = "University of California, San Diego",
+  location = "San Diego",
+  from = "2014-05-01",
+  to = "2017-06-01",
+  descr = """
+**Dutton Lab**
 
-\begin{section}{name="accomplishments"}
+Research Topics:
 
-\sectionheading{"Accomplish­ments", class="col-12 col-lg-4"}
+* Horizontal Gene Transfer
+* Microbial communities
+* Modeling interspecies interactions
+"""}
 
-@@col-12,col-lg-8
+\experience{
+  title = "Curriculum Fellow",
+  company = "Harvard Medical School",
+  location = "Boston",
+  from = "2014-05-01",
+  to = "2017-06-01",
+  descr = """
+**Masters in Immunology**  
+2014-2016
 
-\certificate{
-  title="Neural Networks and Deep Learning",
-  meta="Coursera",
-  metalink="https://www.coursera.org",
-  date="Oct 2018",
-  certlink="https://www.coursera.org"
-  }
-\certificate{
-  title="Blockchain Fundamentals",
-  descr="Formulated informed **blockchain** models, hypotheses, and use cases.",
-  meta="Coursera",
-  metalink="https://www.edx.org",
-  date="Mar 2018",
-  certlink="https://www.edx.org"
-  }
-\certificate{
-  title="Object-Oriented Programming in R: S3 and R6 Course",
-  meta="DataCamp",
-  metalink="https://www.datacamp.com",
-  date="Jul 2017 – Dec 2017",
-  certlink="https://www.datacamp.com"
-}
+Responsibilities:
+
+* Course design and instruction
+* **Course**: Methods in Basic and Clinical Immunology
+* **Course**: Understanding Immunology Research
+* Masters Program administration
+* Student Mentoring
+
+**Harvard Medical School Online Learning**  
+2016-2017
+
+Responsibilities:
+
+* Course design and instruction
+* **Course**: HMX Fundamentals - Biochemistry
+"""}
 
 @@
 

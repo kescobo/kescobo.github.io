@@ -3,7 +3,11 @@ title = "Sesshin of the Original Face"
 pubdate = Date("2019-07-20")
 tags = ["zen","meditation","poem","personal","sesshin","bowz"]
 math = false
+type = "post"
+draft=false
+img = "/assets/img/2019-original-face-sesshin.jpg"
 +++
+
 
 The 2019 summer sesshin of [Boundless Way Zen][1]
 just wrapped up yesterday.
