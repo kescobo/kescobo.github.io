@@ -10,9 +10,8 @@ Note: you should really never use Regex to parse an HTML file,
 but I'm not _really_ parsing them, I actually am looking for a simple pattern.
 """
 
-cd(joinpath(@__DIR__, "_literate", "webeasties")) # hide
 using Pkg # hide
-Pkg.activate(".") # hide
+Pkg.activate(joinpath(@__DIR__, "_literate", "webeasties")) # hide
 Pkg.instantiate() # hide
 
 #-

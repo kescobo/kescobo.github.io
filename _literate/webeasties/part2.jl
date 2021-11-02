@@ -1,8 +1,9 @@
 md"""
-
+## Testing 1 2
 """
 
-cd(joinpath(@__DIR__, "_literate", "webeasties")) # hide
 using Pkg # hide
-Pkg.activate(".") # hide
+Pkg.activate(joinpath(@__DIR__, "_literate", "webeasties")) # hide
 Pkg.instantiate() # hide
+
+println("Here's some code")
