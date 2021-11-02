@@ -1,9 +1,10 @@
 +++
 title = "We, Beasties recovery - Part 1"
-date = Date("2020-01-06")
+pubdate = Date("2020-01-06")
 category = "code"
 showall = true
 tags = ["microbiology","web", "julia"]
+img = "/assets/img/sciblogs-logo.jpeg"
 math = false
 +++
 

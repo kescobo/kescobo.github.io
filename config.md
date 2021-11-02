@@ -10,6 +10,7 @@ ignore = ["node_modules/", "franklin", "franklin.pub"]
 
 prepath = "ft-academic-resume"
 
+literate_mds = true
 hasplotly = false
 hasmermaid = false
 

@@ -252,10 +252,9 @@ function show_posts(posts; byyear=false)
                 """)
         end
         rpath = post.first
-        title = pagevar(rpath, "title")
-        isnothing(title) && (title = "Untitled")
-        summary = pagevar(rpath, "summary")
-        isnothing(summary) && (summary = "")
+        pagevar(rpath, "draft", default=false) && continue
+        title = pagevar(rpath, "title"; default="Untitled")
+        summary = pagevar(rpath, "summary"; default="")
         date = Dates.format(post.second, dateformat"u d, Y")
         imgpath = pagevar(rpath, "img")
         if isnothing(imgpath)
@@ -278,7 +277,7 @@ function show_posts(posts; byyear=false)
                 </div>
               </div>
               <div class=ml-3>
-                <a href="/$rpath"><img src="$imgpath" alt="$title"></a>
+                $(ifelse(isempty(imgpath), "", """<a href="/$rpath"><img src="$imgpath" alt="$title"></a>"""))
               </div>
             </div>""")
     end

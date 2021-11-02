@@ -12,6 +12,8 @@ hero = "/assets/img/post1_hero.jpg"
 
 hasplotly = true
 hasmermaid = true
+
+draft=true
 +++
 
 Academic is designed to give technical content creators a seamless experience. You can focus on the content and Academic handles the rest.

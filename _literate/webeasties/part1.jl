@@ -1,8 +1,3 @@
-cd(@__DIR__) #hide
-using Pkg #hide
-Pkg.activate(".") #hide
-Pkg.instantiate() #hide
-
 # ### Looping through author pages
 
 # Since each author page has the same url save one number,
@@ -12,6 +7,13 @@ Pkg.instantiate() #hide
 
 # Note: you should really never use Regex to parse an HTML file,
 # but I'm not _really_ parsing them, I actually am looking for a simple pattern.
+
+cd(joinpath(@__DIR__, "_literate", "webeasties")) # hide
+using Pkg # hide
+Pkg.activate(".") # hide
+Pkg.instantiate() # hide
+
+#-
 
 using Downloads: download
 
@@ -134,7 +136,7 @@ doc = root(post)
 #
 # ```html
 # <title>Why every &quot;OMG we&#039;ve cured cancer!!&quot; article is about melanoma | ScienceBlogs</title>
-# <!-- ... -->
+# 
 # <h1 class="page-header"><span>Why every &quot;OMG we&#039;ve cured cancer!!&quot; article is about melanoma</span>
 # ```
 #
