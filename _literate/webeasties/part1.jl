@@ -10,9 +10,11 @@ Note: you should really never use Regex to parse an HTML file,
 but I'm not _really_ parsing them, I actually am looking for a simple pattern.
 """
 
-using Pkg # hide
-Pkg.activate(joinpath(@__DIR__, "_literate", "webeasties")) # hide
-Pkg.instantiate() # hide
+projectdir = joinpath(@__DIR__, "_literate", "webeasties")
+
+using Pkg #hide
+Pkg.activate(projectdir) #hide
+Pkg.instantiate() #hide
 
 #-
 
@@ -21,7 +23,8 @@ using Downloads: download
 posturls = Set(String[])
 baseurl = "https://scienceblogs.com/author/kbonham?page="
 
-for p in 0:7
+## for p in 0:7
+for p in 0:0
     tmp = download(baseurl*string(p))
     for line in eachline(tmp)
         for m in eachmatch(r"href=\"(/webeasties[\w/\-]+)\"", line)
@@ -34,7 +37,7 @@ first(posturls, 5)
 
 #-
 
-length(posturls)
+length(posturls) # for the full set, this is 161
 
 md"""
 Explanation of regex:
@@ -63,7 +66,7 @@ and I didn't really notice the difference,
 since I could write what I did while I was waiting.
 """
 
-htmlout = joinpath(@__DIR__, "html_out")
+htmlout = joinpath(projectdir, "html_out")
 isdir(htmlout) || mkdir(htmlout)
 
 ## this post wasn't available anymore, so I removed it
