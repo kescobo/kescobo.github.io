@@ -10,7 +10,7 @@ Note: you should really never use Regex to parse an HTML file,
 but I'm not _really_ parsing them, I actually am looking for a simple pattern.
 """
 
-projectdir = joinpath(@__DIR__, "_literate", "webeasties")
+projectdir = joinpath(pwd(), "_literate", "webeasties")
 
 using Pkg #hide
 Pkg.activate(projectdir) #hide
@@ -37,7 +37,7 @@ first(posturls, 5)
 
 #-
 
-length(posturls) # for the full set, this is 161
+length(posturls) # for the full set, this is 191
 
 md"""
 Explanation of regex:
