@@ -200,27 +200,27 @@ end
 # - `"year"`: posts/YYYY/name-of-post.md
 # - `"post"`: posts/name-of-post.md
 
-function all_posts()
+function all_posts(postdir="posts")
     posts = Pair{String,Date}[]
     dateformat = globvar("dateformat"; default="yearmonth")
-    for (root, _, files) in walkdir(joinpath(Franklin.FOLDER_PATH[], "posts"))
+    for (root, _, files) in walkdir(joinpath(Franklin.FOLDER_PATH[], postdir))
         for file in files
             endswith(file, ".md") || continue
             ppath = joinpath(root, file)
-            endswith(ppath, joinpath("posts", "index.md")) && continue
+            endswith(ppath, joinpath(postdir, "index.md")) && continue
             spath = splitpath(ppath)
             post = first(splitext(pop!(spath)))
             if dateformat == "yearmonth"
                 mm = pop!(spath)
                 yy = pop!(spath)
-                rpath = joinpath("posts", yy, mm, post)
+                rpath = joinpath(postdir, yy, mm, post)
             elseif dateformat == "year"
                 mm = "01"
                 yy = pop!(spath)
-                rpath = joinpath("posts", yy, post)
+                rpath = joinpath(postdir, yy, post)
             elseif dateformat == "post"
                 mm = yy = "01"
-                rpath = joinpath("posts", post)
+                rpath = joinpath(postdir, post)
             else
                 error("Dateformat $dateformat not supported, use 'post', 'year', or 'yearmonth'")
             end
@@ -233,6 +233,7 @@ function all_posts()
     # sort by chron order, most recent first
     return sort(posts, by=(e->e.second), rev=true)
 end
+
 
 function show_posts(posts; byyear=false)
     isempty(posts) && return ""
@@ -252,7 +253,7 @@ function show_posts(posts; byyear=false)
                 """)
         end
         rpath = post.first
-        pagevar(rpath, "draft", default=false) && continue
+        (!isnothing(pagevar(rpath, "draft")) && pagevar(rpath, "draft")) && continue
         title = pagevar(rpath, "title"; default="Untitled")
         summary = pagevar(rpath, "summary"; default="")
         date = Dates.format(post.second, dateformat"u d, Y")
@@ -293,6 +294,10 @@ end
 
 function hfun_allposts()
     return show_posts(all_posts(), byyear=true)
+end
+
+function hfun_webeastiesposts()
+    return show_posts(all_posts("webeasties/"), byyear=true)
 end
 
 
