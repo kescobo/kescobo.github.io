@@ -131,8 +131,8 @@ for p in 0:0
     end
 end
 
-first&#40;posturls, 5&#41;</code></pre><pre><code class="plaintext code-output">ArgumentError: Package Downloads not found in current path:
-- Run `import Pkg; Pkg.add("Downloads")` to install the Downloads package.
+first&#40;posturls, 5&#41;</code></pre><pre><code class="plaintext code-output">ArgumentError: Package Downloads [f43a241f-c20a-4ad4-852c-f6b1247861c6] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
 
 </code></pre>
 <pre><code class="language-julia">length&#40;posturls&#41; # for the full set, this is 191</code></pre><pre><code class="plaintext code-output">UndefVarError: posturls not defined
