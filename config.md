@@ -8,7 +8,7 @@ dateformat = "year"
 mintoclevel = 2
 ignore = ["node_modules/", "franklin", "franklin.pub"]
 
-prepath = "ft-academic-resume"
+prepath = "FranklinAcademic"
 
 literate_mds = true
 hasplotly = false
