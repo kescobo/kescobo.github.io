@@ -285,18 +285,18 @@ function show_posts(posts; byyear=false)
     return String(take!(io))
 end
 
-function hfun_recentposts(params)
+@delay function hfun_recentposts(params)
     n = parse(Int, params[1])
     allposts = all_posts()
     posts = allposts[1:min(n, length(allposts))]
     return show_posts(posts)
 end
 
-function hfun_allposts()
+@delay function hfun_allposts()
     return show_posts(all_posts(), byyear=true)
 end
 
-function hfun_webeastiesposts()
+@delay function hfun_webeastiesposts()
     return show_posts(all_posts("webeasties/"), byyear=true)
 end
 
