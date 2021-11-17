@@ -15,9 +15,9 @@ hasplotly = false
 hasmermaid = false
 
 # RSS setup
-website_title = "Franklin Template"
-website_descr = "Example website using Franklin"
-website_url   = "https://tlienart.github.io/FranklinTemplates.jl/"
+website_title = "KevinBonham.com"
+website_descr = "Personal website of Kevin Bonham, PhD"
+website_url   = "https://www.kevinbonham.com"
 +++
 
 \newcommand{\callout}[1]{~~~<div class="alert alert-note"><div>~~~#1~~~</div></div>~~~}
