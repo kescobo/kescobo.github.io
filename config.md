@@ -18,6 +18,7 @@ hasmermaid = false
 website_title = "KevinBonham.com"
 website_descr = "Personal website of Kevin Bonham, PhD"
 website_url   = "https://www.kevinbonham.com"
+generate_rss = true
 +++
 
 \newcommand{\callout}[1]{~~~<div class="alert alert-note"><div>~~~#1~~~</div></div>~~~}

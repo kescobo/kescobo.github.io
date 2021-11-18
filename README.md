@@ -1,8 +1,8 @@
-* check search
-* add `/course/` + sub-stuff
-* add posts (e.g. writing technical content)
+# Kevin Bonham, PhD
 
-## Todo
+This is my personal/professional website,
+built using [`Franklin.jl`](https://franklinjl.org)
+and based on the [Academic Resume template](https://github.com/tlienart/ft-academic-resume/).
+and the [julia programming language](https://julialang.org).
 
-* offset when clicking on links to account for header width
-* make sub-header links subtler (no underline, no colour)
+Deployed at [http://kevinbonham.com](http://kevinbonham.com).
