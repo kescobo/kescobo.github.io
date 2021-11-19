@@ -1,6 +1,8 @@
 +++
 title = "We, Beasties recovery - Part 1"
+rss = "We, Beasties recovery - Part 1"
 pubdate = Date("2020-01-06")
+rss_pubdate = Date("2020-01-06")
 category = "code"
 showall = true
 tags = ["microbiology","web", "julia"]
