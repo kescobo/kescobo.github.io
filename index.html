@@ -1,431 +1,184 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="en">
+  <meta name="color-scheme" content="light dark">
 
-  <meta name="author" content="Kevin S. Bonham">
-  <meta name="description" content="Senior Research Scientist">
-
-  <meta name="theme-color" content="#2962ff">
-
-  <link
-  rel=preconnect
-  href="https://fonts.gstatic.com"
-  crossorigin=anonymous>
-
-<link
-  rel=stylesheet
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
-
-<link
-  rel=stylesheet
-  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
-  crossorigin=anonymous>
-
-<link
-  rel=stylesheet
-  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
-  crossorigin=anonymous>
-
-<link
-  rel=stylesheet
-  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
-  crossorigin=anonymous>
-
-<!-- locally served -->
-<link rel=stylesheet href="/libs/academic/academic.min.css">
-
-<link rel=stylesheet href="/css/extra.css">
-<link rel=stylesheet href="/css/custom.css">
-
-<!-- highlight + katex + plotly -->
+  <meta name="author" content="John Doe">
+  <meta name="description" content="John Doe's website">
+  <meta name="keywords" content="blog,developer,personal">
 
 
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="johndoe">
+  <meta name="twitter:description" content="John Doe's website">
 
+  <meta property="og:title" content="summary">
+  <meta property="og:description" content="John Doe's website">
+  <meta property="og:type" content="website">
 
+  <title>johndoe</title>
 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+  <link rel="stylesheet" href="/coder-xranklin-demo/css/coder.min.css" media="screen">
+  <link rel="stylesheet" href="/coder-xranklin-demo/css/coder-dark.min.css" media="screen">
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+  <link rel="icon" type="image/png" href="/coder-xranklin-demo/assets/infra/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/coder-xranklin-demo/assets/infra/favicon-16x16.png" sizes="16x16">
 
-   <title>Academic template</title>  
+  <link rel="apple-touch-icon" href="/coder-xranklin-demo/assets/infra/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/coder-xranklin-demo/assets/infra/apple-touch-icon.png">
+
+  
+  <meta name="generator" content="Franklin.jl" />
+
+  
+
+  
+
+  <style>
+  :root {
+    --block-background: #f4f0ec;
+  }
+  .hljs {
+    padding: 1em;
+  }
+  </style>
+
 </head>
 
-<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+<body class="preload-transitions colorscheme-auto">
 
-  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
-  <div class=container>
-    <!-- Main name -->
-    <div class="d-none d-lg-inline-flex">
-      <a class=navbar-brand href="/">K. Bonham</a>
-    </div>
-    <!-- Button for narrow mode -->
-    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
-      <span><i class="fas fa-bars"></i></span>
-    </button>
-    <!-- Main name for mobile mode -->
-    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
-      <a class=navbar-brand href="/">K. Bonham</a>
-    </div>
-    <!-- Menu items -->
-    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
-      <ul class="navbar-nav d-md-inline-flex">
-        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
-        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
-        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
-        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
-      </ul>
-    </div>
+  <div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+      <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
   </div>
+
+  <main class="wrapper">
+
+    <nav class="navigation">
+  <section class="container">
+
+    <a class="navigation-title" href="/coder-xranklin-demo/">
+      johndoe
+    </a>
+
+    <input type="checkbox" id="menu-toggle">
+    <label class="menu-button float-right" for="menu-toggle">
+      <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+    </label>
+
+    <ul class="navigation-list">
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/coder-xranklin-demo/about/">About</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/coder-xranklin-demo/posts/">Blog</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/coder-xranklin-demo/projects/">Projects</a>
+        </li>
+      
+        <li class="navigation-item">
+          <a class="navigation-link" href="/coder-xranklin-demo/contact/">Contact me</a>
+        </li>
+      
+
+      
+      
+    </ul>
+
+  </section>
 </nav>
 
 
-  <span class="js-widget-page d-none"></span>
+    <div class="content">
+
+      
+        <section class="container centered">
+
+       
+
+
+<div class="about">
 
   
-<div class="franklin-content"><section id="about" class="home-section wg-about">
-  <div class="container">
-    <div class="row "></p>
-<div class="col-12 col-lg-4 profile"><img class="avatar avatar-circle" src="/assets/img/person.jpg" alt="Kevin Bonham"> <div class=portrait-title><h2>Kevin Bonham</h2><h3>Senior Research Scientist</h3><h3><a href="https://www.wellesley.edu" target=_blank rel=noopener><span>Wellesley College</span></a></h3><ul class=network-icon aria-hidden=true><li><a href="https://twitter.com/kevbonham" target=_blank rel=noopener><i class="fab fa-twitter big-icon"></i></a></li><li><a href="https://scholar.google.co.uk/citations?user=o2fUiqwAAAAJ" target=_blank rel=noopener><i class="fas fa-graduation-cap big-icon"></i></a></li><li><a href="https://github.com/kescobo" target=_blank rel=noopener><i class="fab fa-github big-icon"></i></a></li><li><a href="https://www.linkedin.com/in/kevin-bonham-6a10b566" target=_blank rel=noopener><i class="fab fa-linkedin big-icon"></i></a></li></ul></div></div>
-<div class="col-12 col-lg-8"><h1>Biography</h1>   Kevin Bonham is a Senior Research Scientist at Wellesley College,   studying the human microbiome and its impact on childhood cognitive development.   In collaboration with Curtis Huttenhower, he is also developing a computational tool   to simplify the use of Gaussian Process models in the study of longitudinal microbiome data sets. </br><p><i class="fas fa-download pr-1 fa-fw"></i>Download my <a href="/assets/CV.pdf" target=_blank>CV</a>.</p>
-<div class=row><div class=col-md-5><h3>Interests</h3><ul class=ul-interests><li>Human Microbiome</li><li>Computational Biology</li><li>Gaussian Processes</li></ul></div><div class=col-md-7><h3>Education</h3><ul class="ul-edu fa-ul"><li><i class="fa-li fas fa-graduation-cap"></i>
-  <div class=description>
-    <p class=course>PhD in Immunology, 2014</p>
-    <p class=institution>Harvard Graduate School of Arts and Sciences</p>
-  </div>
-</li>
-<li><i class="fa-li fas fa-graduation-cap"></i>
-  <div class=description>
-    <p class=course>BSc in Biochemistry and Cell Biology, 2006</p>
-    <p class=institution>University of California, San Diego</p>
-  </div>
-</li>
-</ul></div></div></div>
-<p>    </div>
-  </div>
-</section>
-<section id="skills" class="home-section wg-featurette">
-  <div class="container">
-    <div class="row featurette"></p>
-<div class="col-md-12 section-heading"><h1>Skills</h1></div>
 
-<p><div class="col-12 col-sm-4">
-  <div class=featurette-icon style="text-align:center;">
-  <img style="display:inline-block; width:56px;" src="/assets/img/julia-dots.svg">  </div>
-  <h3>Julia</h3>
-  <p>for technical computing</p>
-</div> <div class="col-12 col-sm-4">
-  <div class=featurette-icon style="text-align:center;">
-  <i class="fas fa-chart-line" style=""></i>  </div>
-  <h3>Data science</h3>
-  <p>Analysis, visualization</p>
-</div> <div class="col-12 col-sm-4">
-  <div class=featurette-icon style="text-align:center;">
-  <i class="fas fa-code-branch" style=""></i>  </div>
-  <h3>Software Eng</h3>
-  <p>git, unit testing, CI</p>
-</div></p>
-<p>    </div>
-  </div>
-</section>
-<section id="experience" class="home-section wg-experience">
-  <div class="container">
-    <div class="row "></p>
-<div class="col-12 col-lg-4 section-heading"><h1>Experience</h1></div>
-
-<div class="col-12 col-lg-8"><div class="row experience">
-  <div class="col-auto text-center flex-column d-none d-sm-flex">
-    <!--
-      Element next to the card (pill) with a full/empty circle
-      to give a visual idea of the timeline
-    -->
-    <div class="row h-50">
-  <div class=col>&nbsp;</div>
-  <div class=col>&nbsp;</div>
-</div><div class=m-2><span class="badge badge-pill border exp-fill">&nbsp;</span></div><div class="row h-50">
-  <div class="col border-right">&nbsp;</div>
-  <div class=col>&nbsp;</div>
-</div>
+  <div class="avatar">
+    <img src="/coder-xranklin-demo/assets/infra/avatar.jpg" alt="avatar">
   </div>
 
-  <!--
-    Card and text
-  -->
-  <div class="col py-2">
-    <div class=card>
-      <div class=card-body>
-        <h4 class="card-title exp-title text-muted mt-0 mb-1">Research Scientist</h4>
-        <h4 class="card-title exp-company text-muted my-0">Wellesley College</h4>
-        <div class="text-muted exp-meta">2018-01-01 – 
-          <span class=middot-divider></span><span>Massachusetts</span>
-        </div>
-        <div class=card-text><strong>Klepac-Ceraj Lab</strong></p>
-<p>Research Topics:</p>
-<ul>
-<li><p>Human microbiome</p>
-</li>
-<li><p>Child cognitive development</p>
-</li>
-<li><p>Computational biology education</p>
-</li>
-<li><p>Diversity in STEM</p>
-</li>
-<li><p>Open source development</p>
-</li>
-</ul>
-<p>        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row experience">
-  <div class="col-auto text-center flex-column d-none d-sm-flex">
-    <!--
-      Element next to the card (pill) with a full/empty circle
-      to give a visual idea of the timeline
-    -->
-    <div class="row h-50">
-  <div class="col border-right">&nbsp;</div>
-  <div class=col>&nbsp;</div>
-</div><div class=m-2><span class="badge badge-pill border ">&nbsp;</span></div><div class="row h-50">
-  <div class="col border-right">&nbsp;</div>
-  <div class=col>&nbsp;</div>
-</div>
-  </div>
+  <h1>John Doe</h1>
 
-  <!--
-    Card and text
-  -->
-  <div class="col py-2">
-    <div class=card>
-      <div class=card-body>
-        <h4 class="card-title exp-title text-muted mt-0 mb-1">Postdoctoral Fellow</h4>
-        <h4 class="card-title exp-company text-muted my-0">Harvard TH Chan School of Public Health</h4>
-        <div class="text-muted exp-meta">2017-05-30 – 2018-12-31
-          <span class=middot-divider></span><span>Boston</span>
-        </div>
-        <div class=card-text><strong>Huttenhower Lab</strong></p>
-<p>Research Topics:</p>
-<ul>
-<li><p>Human microbiome</p>
-</li>
-<li><p>Inflammatory arthritis</p>
-</li>
-<li><p>Computational biology education</p>
-</li>
-</ul>
-<p>        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row experience">
-  <div class="col-auto text-center flex-column d-none d-sm-flex">
-    <!--
-      Element next to the card (pill) with a full/empty circle
-      to give a visual idea of the timeline
-    -->
-    <div class="row h-50">
-  <div class="col border-right">&nbsp;</div>
-  <div class=col>&nbsp;</div>
-</div><div class=m-2><span class="badge badge-pill border ">&nbsp;</span></div><div class="row h-50">
-  <div class="col border-right">&nbsp;</div>
-  <div class=col>&nbsp;</div>
-</div>
-  </div>
+  <h2>Full Stack DevOps<br>Magician<br></h2>
 
-  <!--
-    Card and text
-  -->
-  <div class="col py-2">
-    <div class=card>
-      <div class=card-body>
-        <h4 class="card-title exp-title text-muted mt-0 mb-1">Postdoctoral Fellow</h4>
-        <h4 class="card-title exp-company text-muted my-0">University of California, San Diego</h4>
-        <div class="text-muted exp-meta">2014-05-01 – 2017-06-01
-          <span class=middot-divider></span><span>San Diego</span>
-        </div>
-        <div class=card-text><strong>Dutton Lab</strong></p>
-<p>Research Topics:</p>
-<ul>
-<li><p>Horizontal Gene Transfer</p>
-</li>
-<li><p>Microbial communities</p>
-</li>
-<li><p>Modeling interspecies interactions</p>
-</li>
-</ul>
-<p>        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="row experience">
-  <div class="col-auto text-center flex-column d-none d-sm-flex">
-    <!--
-      Element next to the card (pill) with a full/empty circle
-      to give a visual idea of the timeline
-    -->
-    <div class="row h-50">
-  <div class="col border-right">&nbsp;</div>
-  <div class=col>&nbsp;</div>
-</div><div class=m-2><span class="badge badge-pill border ">&nbsp;</span></div><div class="row h-50">
-  <div class=col>&nbsp;</div>
-  <div class=col>&nbsp;</div>
-</div>
-  </div>
-
-  <!--
-    Card and text
-  -->
-  <div class="col py-2">
-    <div class=card>
-      <div class=card-body>
-        <h4 class="card-title exp-title text-muted mt-0 mb-1">Curriculum Fellow</h4>
-        <h4 class="card-title exp-company text-muted my-0">Harvard Medical School</h4>
-        <div class="text-muted exp-meta">2014-05-01 – 2017-06-01
-          <span class=middot-divider></span><span>Boston</span>
-        </div>
-        <div class=card-text><strong>Masters in Immunology</strong>   2014-2016</p>
-<p>Responsibilities:</p>
-<ul>
-<li><p>Course design and instruction</p>
-</li>
-<li><p><strong>Course</strong>: Methods in Basic and Clinical Immunology</p>
-</li>
-<li><p><strong>Course</strong>: Understanding Immunology Research</p>
-</li>
-<li><p>Masters Program administration</p>
-</li>
-<li><p>Student Mentoring</p>
-</li>
-</ul>
-<p><strong>Harvard Medical School Online Learning</strong>   2016-2017</p>
-<p>Responsibilities:</p>
-<ul>
-<li><p>Course design and instruction</p>
-</li>
-<li><p><strong>Course</strong>: HMX Fundamentals - Biochemistry</p>
-</li>
-</ul>
-<p>        </div>
-      </div>
-    </div>
-  </div>
-</div></div>
-<p>    </div>
-  </div>
-</section>
-<section id="posts" class="home-section wg-pages">
-  <div class="container">
-    <div class="row "></p>
-<div class="col-12 col-lg-4 section-heading"><h1>Recent Posts</h1></div>
-
-<div class="col-12 col-lg-8"><div class="media stream-item">
-  <div class=media-body>
-    <h3 class="article-title mb-0 mt-0"><a href="/posts/2021/webeasties-2">We, Beasties recovery - Part 2</a></h3>
-    <a href="/posts/2021/webeasties-2" class=summary-link>
-      <div class=article-style></div>
-    </a>
-    <div class="stream-meta article-metadata">
-      <div class=article-metadata><span class=article-date>Published on Nov 6, 2021.</span>
-      </div>
-    </div>
-  </div>
-  <div class=ml-3>
-    <a href="/posts/2021/webeasties-2"><img src="/assets/img/sciblogs-logo.jpeg" alt="We, Beasties recovery - Part 2"></a>
-  </div>
-</div><div class="media stream-item">
-  <div class=media-body>
-    <h3 class="article-title mb-0 mt-0"><a href="/posts/2020/webeasties-1">We, Beasties recovery - Part 1</a></h3>
-    <a href="/posts/2020/webeasties-1" class=summary-link>
-      <div class=article-style></div>
-    </a>
-    <div class="stream-meta article-metadata">
-      <div class=article-metadata><span class=article-date>Published on Jan 6, 2020.</span>
-      </div>
-    </div>
-  </div>
-  <div class=ml-3>
-    <a href="/posts/2020/webeasties-1"><img src="/assets/img/sciblogs-logo.jpeg" alt="We, Beasties recovery - Part 1"></a>
-  </div>
-</div><div class="media stream-item">
-  <div class=media-body>
-    <h3 class="article-title mb-0 mt-0"><a href="/posts/2019/original-face">Sesshin of the Original Face</a></h3>
-    <a href="/posts/2019/original-face" class=summary-link>
-      <div class=article-style></div>
-    </a>
-    <div class="stream-meta article-metadata">
-      <div class=article-metadata><span class=article-date>Published on Jul 20, 2019.</span>
-      </div>
-    </div>
-  </div>
-  <div class=ml-3>
-    <a href="/posts/2019/original-face"><img src="/assets/img/2019-original-face-sesshin.jpg" alt="Sesshin of the Original Face"></a>
-  </div>
-</div><div class="media stream-item">
-  <div class=media-body>
-    <h3 class="article-title mb-0 mt-0"><a href="/posts/2018/lamg2018">Lake Arrowhead Microbial Genomics 2018 #LAMG2018</a></h3>
-    <a href="/posts/2018/lamg2018" class=summary-link>
-      <div class=article-style></div>
-    </a>
-    <div class="stream-meta article-metadata">
-      <div class=article-metadata><span class=article-date>Published on Sep 20, 2018.</span>
-      </div>
-    </div>
-  </div>
-  <div class=ml-3>
-    <a href="/posts/2018/lamg2018"><img src="/assets/img/ucla_lacc.png" alt="Lake Arrowhead Microbial Genomics 2018 #LAMG2018"></a>
-  </div>
-</div><div class="media stream-item">
-  <div class=media-body>
-    <h3 class="article-title mb-0 mt-0"><a href="/posts/2017/pubmed-gender-extention">Matching Publications to PubMed IDs</a></h3>
-    <a href="/posts/2017/pubmed-gender-extention" class=summary-link>
-      <div class=article-style></div>
-    </a>
-    <div class="stream-meta article-metadata">
-      <div class=article-metadata><span class=article-date>Published on Dec 10, 2017.</span>
-      </div>
-    </div>
-  </div>
-  <div class=ml-3>
-    
-  </div>
-</div></div>
-<p>    </div>
-  </div>
-</section>
-
-
-<div class="container">
-  <footer class="site-footer">
-    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
-
-      <span class="float-right" aria-hidden="true">
-        <a href="#" class="back-to-top">
-          <span class="button_icon">
-            <i class="fas fa-chevron-up fa-2x"></i>
-          </span>
+  
+  <ul>
+      <li>
+        <a href="https://github.com/johndoe/" aria-label="Github"   >
+          <i class="fa fa-2x fa-github" aria-hidden="true"></i>
         </a>
-      </span>
-    </p>
-  </footer>
+      </li>
+
+      <li>
+        <a href="https://gitlab.com/johndoe/" aria-label="Gitlab"   >
+          <i class="fa fa-2x fa-gitlab" aria-hidden="true"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://twitter.com/johndoe/" aria-label="Twitter"   >
+          <i class="fa fa-2x fa-twitter" aria-hidden="true"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://www.linkedin.com/in/johndoe/" aria-label="LinkedIn"   >
+          <i class="fa fa-2x fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://medium.com/@johndoe" aria-label="Medium"   >
+          <i class="fa fa-2x fa-medium" aria-hidden="true"></i>
+        </a>
+      </li>
+
+      <li>
+        <a href="https://myhugosite.com/index.xml" aria-label="RSS" rel="alternate"  type="application/rss+xml">
+          <i class="fa fa-2x fa-rss" aria-hidden="true"></i>
+        </a>
+      </li>
+  </ul>
+
 </div>
-</div>
 
-<!-- CONTENT ENDS HERE -->
-    
-    
 
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+      </section>
+    </div>
 
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+    <footer class="footer">
+      <section class="container">
+        © 2022 John Doe · Powered by
+  <a href="https://franklin.jl">Franklin.jl</a> &
+  <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>.
+      </section>
+    </footer>
 
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+  </main>
 
-  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+  
 
-  <script src="/libs/academic/academic.min.js"></script>
+  
 
-  </body>
+<script src="/coder-xranklin-demo/libs/coder.min.js"></script>
+
+</body>
 </html>
+

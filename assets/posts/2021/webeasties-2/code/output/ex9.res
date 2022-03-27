@@ -1,1 +1,0 @@
-append_image_links (generic function with 1 method)

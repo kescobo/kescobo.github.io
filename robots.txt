@@ -1,4 +1,0 @@
-Sitemap: https://www.kevinbonham.com/sitemap.xml
-
-User-agent: *
-Disallow:

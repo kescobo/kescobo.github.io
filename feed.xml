@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <rss version="2.0"
   xmlns:content="http://purl.org/rss/1.0/modules/content/"
   xmlns:dc="http://purl.org/dc/elements/1.1/"
   xmlns:media="http://search.yahoo.com/mrss/"
   xmlns:atom="http://www.w3.org/2005/Atom"
   xmlns:georss="http://www.georss.org/georss">
-
   <channel>
     <title>
-      <![CDATA[  KevinBonham.com  ]]>
+      <![CDATA[  Coder Xranklin demo  ]]>
     </title>
-    <link> https://www.kevinbonham.com </link>
+    <link> https://tlienart.github.io/coder-xranklin-demo/ </link>
     <description>
-      <![CDATA[  Personal website of Kevin Bonham, PhD  ]]>
+      <![CDATA[  Coder Xranklin demo  ]]>
     </description>
-    <atom:link
-      href="https://www.kevinbonham.com/feed.xml"
-      rel="self"
-      type="application/rss+xml" />
-
 
 <item>
   <title>
-    <![CDATA[  We, Beasties recovery - Part 1  ]]>
+    <![CDATA[  Markdown Syntax Guide  ]]>
   </title>
-  <link> https://www.kevinbonham.com/posts/2020/webeasties-1/index.html </link>
-  <guid> https://www.kevinbonham.com/posts/2020/webeasties-1/index.html </guid>
+  <link> https://tlienart.github.io/coder-xranklin-demo/posts/markdown-syntax/index.html </link>
+  <guid> https://tlienart.github.io/coder-xranklin-demo/posts/markdown-syntax/index.html </guid>
   <description>
-    <![CDATA[  We, Beasties recovery - Part 1  ]]>
-  </description>  
-    
-  <pubDate>Mon, 06 Jan 2020 00:00:00 +0000</pubDate>  
-  
-  
+    <![CDATA[  Markdown syntax etc  ]]>
+  </description>
   <atom:author>
-    <atom:name>Kevin S. Bonham</atom:name>
+    <atom:name>John Doe</atom:name>
   </atom:author>
-        
+</item>
+
+<item>
+  <title>
+    <![CDATA[  Emoji Support  ]]>
+  </title>
+  <link> https://tlienart.github.io/coder-xranklin-demo/posts/emoji-support/index.html </link>
+  <guid> https://tlienart.github.io/coder-xranklin-demo/posts/emoji-support/index.html </guid>
+  <description>
+    <![CDATA[  Emoji support yada yada  ]]>
+  </description>
+  <atom:author>
+    <atom:name>John Doe</atom:name>
+  </atom:author>
 </item>
 </channel></rss>
