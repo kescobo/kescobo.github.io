@@ -37,6 +37,8 @@
   
 
   
+    <link rel="stylesheet" href="/coder-xranklin-demo/libs/highlight/github.min.css">
+  
 
   <style>
   :root {
@@ -100,17 +102,81 @@
 
     <div class="content">
 
-       
-        <section class="container list">
-          <h1 class="title">
-            <a class="title-link" href="/coder-xranklin-demo/posts/">
-              Posts
-            </a>
-          </h1>
+        
+        <section class="container post">
+          <header>
+  <div class="post-title">
+    <h1 class="title">
+      <a class="title-link" href="/coder-xranklin-demo/posts/literate/index.html">
+        Literate
+      </a>
+    </h1>
+  </div>
+
+  <div class="post-meta">
+    
+      <div class="date">
+        <span class="posted-on">
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <time datetime='2022-03-28'>
+            March 28, 2022
+          </time>
+        </span>
+
+        
+          <span class="reading-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            3-minute read
+          </span>
+        
+      </div>
+    
+
+    
+      <div class="tags">
+        <i class="fa fa-tag" aria-hidden="true"></i>
+        <span class="tag"><a href="/coder-xranklin-demo/tags/literate/">literate</a></span>
+      </div>
+    
+    </div>
+  </header>
+
 
        
        
-<ul><li><span class="date">March 28, 2022</span><a class="title" href="/coder-xranklin-demo/posts/literate">Literate</a></li><li><span class="date">March 11, 2019</span><a class="title" href="/coder-xranklin-demo/posts/markdown-syntax">Markdown Syntax Guide</a></li><li><span class="date">March 9, 2019</span><a class="title" href="/coder-xranklin-demo/posts/placeholder-text">Placeholder Text</a></li><li><span class="date">March 8, 2019</span><a class="title" href="/coder-xranklin-demo/posts/math-typesetting">Math Typesetting</a></li><li><span class="date">March 5, 2019</span><a class="title" href="/coder-xranklin-demo/posts/emoji-support">Emoji Support</a></li></ul>
+       
+<p>You can work with literate files (everything below the horizontal line is from a Literate file).</p>
+
+<hr>
+<h3 id="this_is_literate" > This is Literate<a class="heading-link" href="#this_is_literate">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>It works as you'd expect it, code as well:</p>
+<pre><code class="julia">1+1</code></pre>
+<div class="code-output"><pre><code class="code-result language-plaintext">2</code></pre></div><p>you just need to make sure you have <code>import Literate</code> or
+<code>using Literate</code> in your <code>utils.jl</code>.</p>
+<pre><code class="julia">for i in 1:10
+    println(&quot;*&quot;^i)
+end</code></pre>
+<div class="code-output"><pre><code class="code-stdout language-plaintext">*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+</code></pre></div><p>that's it!</p>
+<h3 id="packages" > Packages<a class="heading-link" href="#packages">
+  <i class="fa fa-link" aria-hidden="true"></i>
+</a>
+</h3><p>You can also use Packages of course</p>
+<pre><code class="julia">using Colors
+RGB(0.5, 0.7, 0.2)</code></pre>
+<div class="code-output"><img class="code-figure" src="/coder-xranklin-demo/assets/posts/literate/figs-html/__autofig_16690618627325798369.svg">
+</div>
 
       </section>
     </div>
@@ -127,6 +193,9 @@
 
   
 
+  
+    <script src="/coder-xranklin-demo/libs/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
   
 
 <script src="/coder-xranklin-demo/libs/coder.min.js"></script>
