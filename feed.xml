@@ -7,24 +7,24 @@
   xmlns:georss="http://www.georss.org/georss">
   <channel>
     <title>
-      <![CDATA[  Coder Xranklin demo  ]]>
+      <![CDATA[  Kevin Bonham dot com  ]]>
     </title>
-    <link> https://tlienart.github.io/coder-xranklin-demo/ </link>
+    <link> https://kescobo.github.io/categorical-ambiguity/ </link>
     <description>
-      <![CDATA[  Coder Xranklin demo  ]]>
+      <![CDATA[  Personal website of Kevin Bonham, PhD  ]]>
     </description>
 
 <item>
   <title>
     <![CDATA[  Literate  ]]>
   </title>
-  <link> https://tlienart.github.io/coder-xranklin-demo/posts/literate/index.html </link>
-  <guid> https://tlienart.github.io/coder-xranklin-demo/posts/literate/index.html </guid>
+  <link> https://kescobo.github.io/categorical-ambiguity/posts/literate/index.html </link>
+  <guid> https://kescobo.github.io/categorical-ambiguity/posts/literate/index.html </guid>
   <description>
     <![CDATA[  Using Literate  ]]>
   </description>
   <atom:author>
-    <atom:name>John Doe</atom:name>
+    <atom:name>Kevin Bonham</atom:name>
   </atom:author>
 </item>
 
@@ -32,13 +32,13 @@
   <title>
     <![CDATA[  Markdown Syntax Guide  ]]>
   </title>
-  <link> https://tlienart.github.io/coder-xranklin-demo/posts/markdown-syntax/index.html </link>
-  <guid> https://tlienart.github.io/coder-xranklin-demo/posts/markdown-syntax/index.html </guid>
+  <link> https://kescobo.github.io/categorical-ambiguity/posts/markdown-syntax/index.html </link>
+  <guid> https://kescobo.github.io/categorical-ambiguity/posts/markdown-syntax/index.html </guid>
   <description>
     <![CDATA[  Markdown syntax etc  ]]>
   </description>
   <atom:author>
-    <atom:name>John Doe</atom:name>
+    <atom:name>Kevin Bonham</atom:name>
   </atom:author>
 </item>
 
@@ -46,13 +46,13 @@
   <title>
     <![CDATA[  Emoji Support  ]]>
   </title>
-  <link> https://tlienart.github.io/coder-xranklin-demo/posts/emoji-support/index.html </link>
-  <guid> https://tlienart.github.io/coder-xranklin-demo/posts/emoji-support/index.html </guid>
+  <link> https://kescobo.github.io/categorical-ambiguity/posts/emoji-support/index.html </link>
+  <guid> https://kescobo.github.io/categorical-ambiguity/posts/emoji-support/index.html </guid>
   <description>
     <![CDATA[  Emoji support yada yada  ]]>
   </description>
   <atom:author>
-    <atom:name>John Doe</atom:name>
+    <atom:name>Kevin Bonham</atom:name>
   </atom:author>
 </item>
 </channel></rss>
