@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Using the immune system to fight cancer</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Using the immune system to fight cancer</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>Cancer sucks. I&#39;m sure I don&#39;t have to tell you that - it&#39;s one of the <a href="http://www.cdc.gov/nchs/fastats/lcod.htm">leading causes</a> of death in developed countries, and our treatment options are pretty thin. Basically, it amounts to cutting out the tumors that can be seen, and then giving a controlled administration of poison in the hopes that the <a href="/tag/cancer">cancer</a> cells die before you do. Don&#39;t get me wrong - advances in oncology have saved many lives, but it&#39;s no surprise that there&#39;s a lot of research happening to find better options.</p>
+<p>One promising avenue of study is augmenting the immune system to fight cancer directly. It&#39;s known that the immune system already plays a role in protecting us from tumors &#40;immunodeficient mice and humans are more prone to cancer&#41;, and we already know it&#39;s great at targeted destruction, so it seems like a no-brainer. Indeed, my weekly &quot;immunology research&quot; google news alert almost always has at least one article about a new study curing cancer with the immune system. <a href="http://goo.gl/32rF3">Case in point</a>:</p>
+<p>The answer to curing cancer may lie in the capabilities of the human immune system as opposed to current chemical treatments, according to a new study published by researchers at Dartmouth-Hitchcock Medical Center. The study, published Nov. 15 in Clinical Cancer Research, used tumors found in cancer patients to develop individualized vaccines that induce immune responses to cancers.</p>
+<p><a href="http://clincancerres.aacrjournals.org/content/16/22/5548.abstract">This study</a> is pretty great, but there&#39;s a caveat.  A lot of scientists have tried using antibodies to target everything from traditional chemotherapeutics to bee venom directly to tumors, but this strategy has <a href="http://scienceblogs.com/webeasties/2010/03/why_every_omg_weve_cured_cance.php">a lot of drawbacks</a>. First of all, the tumors need to have a particular antigen - something that&#39;s different on the tumor than on normal cells - and that antigen has to be present on the surface of the tumor cells, AND we have to know what the antigen is.</p>
+<p>The strategy taken by this group is a bit different. Instead of deriving antibodies and attaching something deadly to them, they took dendritic cells from the patients and pulsed them with mushed-up tumor cells along with some adjuvant to activate them. These dendritic cells were then given back to the patient, where they homed to lymph nodes and kick-started an immune response. In order for this treatment to work, the tumor still needs to have unique protein antigens &#40;otherwise the immune response would be non-specific&#41;, but we don&#39;t actually need to know what the antigen is - we can just let the immune system decide for itself. Plus, the antigen doesn&#39;t have to be on the surface; in contrast to antibodies, T-cells can actually &quot;see&quot; what&#39;s going on on the inside.</p>
+<p>The patients in this study were followed for 5 years, and of the ones that generated a good immune response, 63&#37; had survived with no recurrence &#40;compared to 18&#37; for the controls&#41;. Still, only about 60&#37; of the patients treated actually generated an immune response in the first place. And this isn&#39;t the first study to try dendritic cell based autologous tumor vaccine &#40;autologous just means using the patients&#39; own cells&#41;, it&#39;s just that most of the attempts thus far have been unsuccessful.</p>
+<p>There are a lot of reasons this might be the case. First off, any tumor that actually starts growing has by definition already figured out some ways to subvert the immune system. We know that some tumors directly suppress the immune system by activating regulatory T-cells or generating wound-healing macrophages, some just hide from the immune system by down-regulating certain markers, and there are probably numerous other methods that we know nothing about. Giving the immune system a boost may be able to overcome this limitation, but it&#39;s also possible that a tumor doesn&#39;t actually have any antigens for the immune system to target. Tumors started out as your own cells, and the immune system is trained not to see self. If tumor cells have just deleted or over-expressed normal proteins, there would be nothing to target.  Finally, it&#39;s possible that the immune system will target the tumor, but that the tumor will learn to escape. Every individual&#39;s cancer is unique, but within a particular tumor, there can also be a lot of variation. If the vaccine finds a particular antigen, it&#39;s quite possible that individual cells within the tumor will not be expressing that antigen &#40;or express it at low levels&#41;, and those cells will then be selected for as the T-cells rush in and lay waste to their brethren.</p>
+<p>Despite these caveats, it&#39;s still exciting to see this strategy working. As we learn more about the way that cancer develops, and how the immune system reacts to it, we will hopefully be able to augment this treatment to be even more effective.</p>
+<p>Barth RJ Jr, Fisher DA, Wallace PK, Channon JY, Noelle RJ, Gui J, &amp; Ernstoff MS &#40;2010&#41;. A Randomized Trial of Ex vivo CD40L Activation of a Dendritic Cell Vaccine in Colorectal Cancer Patients: Tumor-Specific Immune Responses Are Associated with Improved Survival. Clinical cancer research : an official journal of the American Association for Cancer Research, 16 &#40;22&#41;, 5548-56 PMID: <a href="review">20884622</a></p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

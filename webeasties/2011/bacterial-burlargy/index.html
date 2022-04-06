@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Bacterial Burglary</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Bacterial Burglary</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>I feel like I&#39;ve seen this movie before. A group of thieves need to gain entry to a highly secured vault. The vault door is nearly impregnable, and once inside, there are motion sensors, security cameras and laser trip lines, all of which sound the alarm. When the security guards hear what&#39;s happening, they are told to release a deadly gas into the vault, killing anyone inside. But Salmonella enterica, that charming bug responsible for <a href="http://www.cdc.gov/salmonella/">all manner of unpleasantness</a>, is a clever burglar. It has learned to live inside macrophages - cells that are usually used to destroy bugs - and uses their own defenses against them.  The first step is getting inside, but when the cell is designed to eat bugs, this isn&#39;t much of a feat. Macrophages express a number of receptors that latch onto bacteria, viruses and all manner of dangerous things to pull them inside. But this thief wants to be caught, all it has to do is get near a macrophage, and it will be engulfed. The thieves just turn themselves in, knowing the guards will try to secure them in the vault. It&#39;s the next step that&#39;s tricky. Once macrophages engulf something, it is enclosed in a membrane-bound vesicle called a phagosome, which rapidly begins a transformation process. Everything inside is destined for destruction, so the phagosome begins to pump in protons, increasing the acidity. This is pretty inhospitable by itself, but acidification also activates enzymes designed to destroy any and all molecules they find.  Acidification itself is triggered by the receptors of the innate immune system, especially Toll-like receptors. TLR3, 7 and 9 have all been shown to contribute to clearing Salmonella. Not surprisingly, if you knock out one or two of these receptors, infection with these bugs is far more deadly. But researchers at UC Berkeley noticed something strange - if you knock out all three, mice are protected. In other words, if you disable the security cameras, motion sensors AND laser trip lines, the thieves can&#39;t finish the heist. How does that make any sense?</p>
+<p><a href="http://www.cell.com/abstract/S0092-8674&#40;11&#41;00070-5?switch&#61;standard">TLR Signaling Is Required for Salmonella typhimurium Virulence</a></p>
+<p>For most bugs, macrophages spell doom, but Salmonella knows what to expect. It has evolved to express effector proteins that prevent the phagosome from getting too inhospitable. These effectors &#40;encoded by a gene element called SPI-2&#41; prevent activation of the degradative enzymes, and turn off the proton pumps to prevent the vesicle from becoming too acidic - they cut the gas lines to protect themselves. Other SPI-2 effectors make the vesicle more hospitable to growth. When one or two of the TLRs are disrupted, the rest of the immune response to bacterial infection is blunted, and since Salmonella is living in a hospitable vesicle of its own construction, it replicates like crazy.</p>
+<p>The catch is that the trigger for Salmonella to release its SPI-2 effectors is when the phagosome starts to become acidic. Evidently, when TLR signaling is completely knocked out, there&#39;s no acidification, and the Salmonella just sits inside the vacuole. It doesn&#39;t realize that it&#39;s in the right location, so it behaves as if it&#39;s still trying to find a host. My metaphor might break down a bit at this point, but I&#39;ll try to press ahead anyway - the thieves don&#39;t hear an alarm, so they reason that they must not actually be in the vault.</p>
+<p>Here&#39;s a fun little video in which the main authors explain the paper. I like the idea of science journals trying to do this sort of thing. I don&#39;t know if it appeals to a wide audience, but at least they&#39;re making an effort.</p>
+<p><a href="http://vimeo.com/21268013">TLR signaling is required for Salmonella typhimurium virulence</a> from <a href="http://vimeo.com/user6355771">Kevin Bonham</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+<p>Fun personal note: the second author on this paper is a first year in the Immunology Program here at Harvard, and is also an <a href="http://en.wikipedia.org/wiki/Jernej_Godec">Olympic Swimmer.</a> More importantly, I was his buddy during recruitment last year, so he&#39;s only here because of me.</p>
+<p>Arpaia N, Godec J, Lau L, Sivick KE, McLaughlin LM, Jones MB, Dracheva T, Peterson SN, Monack DM, &amp; Barton GM &#40;2011&#41;. TLR Signaling Is Required for Salmonella typhimurium Virulence. Cell, 144 &#40;5&#41;, 675-88 PMID: <a href="review">21376231</a></p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

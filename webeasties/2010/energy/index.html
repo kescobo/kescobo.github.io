@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Energy Scales</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Energy Scales</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>Bacteria are tiny. Compared to our cells, they can seem insignificant. There are about ten times more bacteria cells in your gut <em>right now</em> than there are human cells in your entire body, but they only make up about 5&#37; of your mass. They&#39;re tiny, but they&#39;re successful - they live in places we can&#39;t, they can metabolize things we can&#39;t, and they&#39;re everywhere. Despite this success, there&#39;s some things they don&#39;t do, like multicellularity, but why?</p>
+<p>PZ has a<a href="http://goo.gl/nNUOc"> great review</a> of a recent paper in Nature that tries to answer that question, so I don&#39;t need to recapitulate it, but I have just a couple of &#40;minor&#41; quibbles with this analysis.</p>
+<p>First off, many prokaryotes &#40;which includes bacteria and archaea - all others are called &quot;eukaryotes&quot;&#41; do achieve something like multicellularity. <a href="http://labrat.fieldofscience.com/2010/07/quorum-sensing-and-biofilms.html">Biofilms</a> are communities of bacteria that communicate with and help each other. There are even <a href="http://goo.gl/wpXRK">examples</a> of something that looks like differentiation in a community of the same &#40;or different&#41; species in a biofilm.</p>
+<p>That said, there&#39;s clearly a profound difference in the level and complexity of eukaryotic multicellularity. But I&#39;m not sure I fully buy these authors&#39; conclusions &#40;as expressed by PZ&#41;:</p>
+<p>Eukaryotic power production per gram isn&#39;t any better than what prokaryotes do, all they&#39;ve done is made their cells bigger, and there&#39;s nothing to stop prokaryotes from growing large and doing the same thing. In fact, they do: the largest known bacterium, Thiomargarita, can reach a diameter of a half-millimeter. It gets more metabolic power in a similar way to how eukaryotes do it: we eukaryotes carry a population of mitochondria with convoluted membranes and a dedicated strand of DNA, all to produce energy, and the larger the cell, the more mitochondria are present. Thiomargarita doesn&#39;t have mitochondria, but it instead duplicates its own genome many times over, with 6,000-17,000 nucleoids distributed around the cell, each regulating its own patch of energy-producing membrane. It&#39;s functionally equivalent to the eukaryotic mitochondrial array then, right?</p>
+<p>Wrong. There&#39;s a catch. Mitochondria have grossly stripped down genomes, carrying just a small cluster of genes essential for ATP production. One hypothesis for why this mitochondrial genome is maintained is that it acts as a local control module, rapidly responding to changes in the local membrane to regulate the structure.</p>
+<p>At first glance, this conclusion seems plausible, but there&#39;s no reason in principal that bacteria could not compartmentalize the necessary genes for metabolism. Bacteria routinely hold bits of genetic material on plasmids that can replicate and express proteins independently of the main chromosome. If Thiomargarita learned to replicate only metabolic genes on a plasmid instead of it&#39;s whole genome, that would be the functional equivalent of mitochondria. The authors&#39; conclusion is that mitochondria are &quot;required,&quot; but bacteria can achieve all the features of mitochondria &#40;compartmentalization, aerobic metabolism, independent genes&#41;. There&#39;s no reason in principal that bacteria could not evolve a mitochondria-like organelle, complete with an independent genome.</p>
+<p>I&#39;m not saying the authors are wrong here - they&#39;re math seems totally reasonable and the idea that energy production might be limiting makes perfect sense. Even the notion that independent metabolic genes would be required to scale up energy production is legit. But the idea that prokaryotes are incapable of these inovations is suspect. There must be something else going on.</p>
+<p>Lane N, &amp; Martin W &#40;2010&#41;. The energetics of genome complexity. Nature, 467 &#40;7318&#41;, 929-34 PMID: <a href="review">20962839</a></p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

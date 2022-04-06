@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+<link rel=stylesheet href="/libs/highlight/atom-one-dark.css">
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>We, Beasties recovery - Part 1</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>We, Beasties recovery - Part 1</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p>Every new year, I tell myself that this is the year I&#39;m going to start blogging again. Sometimes, I even <a href="/posts/2017/back-on-the-horse.md">write posts</a> saying &quot;this year will be different,&quot; and then that ends up being my only post of the year.</p>
+<p>I used to love blogging - I had a relatively popular blog on <a href="https://scienceblogs.com/webeasties">ScienceBlogs.com</a> called &quot;We, Beasties&quot; - a not-so-subtle homage to <a href="https://en.wikipedia.org/wiki/I,_Robot">Isaac Asimov</a> and <a href="https://www.indiebound.org/book/9780156027779">Paul de Kruif</a> - which ended in 2013 when I got recruited to start an <a href="https://blogs.scientificamerican.com/food-matters/">ill-fated blog</a> at Scientific American.</p>
+<p>What I do now is very different than what I was doing in 2013, but I&#39;m always thinking I should get back into it. What better way to do that than to use my new skills to collect my old content?</p>
+<h2 id="scraping_old_posts"><a href="#scraping_old_posts" class="header-anchor">&quot;Scraping&quot; old posts</a></h2>
+<p>Initially, I was expecting to have to do some complicated html parsing, crawling through each post and finding back links, but it turns out the old scienceblogs.com website is actually pretty well laid out.</p>
+<p>First, I went to <a href="https://scienceblogs.com/author/kbonham">my author page</a>, which lists all of my posts in pagenated form. In the browser, I right-clicked in the page, and selected &quot;view source&quot; to see the underlying html &#40;which is how the page will be downloaded&#41;.</p>
+<p>A few things jump out right away:</p>
+<ol>
+<li><p>The blocks that contain links to previous posts look like</p>
+</li>
+</ol>
+<pre><code class="language-html">&lt;h5 class&#61;&quot;field-content&quot;&gt;&lt;a href&#61;&quot;/webeasties/2013/09/03/we-beasties-sproulates&quot; hreflang&#61;&quot;und&quot;&gt;We, Beasties Sporulates&lt;/a&gt;&lt;/h5&gt;</code></pre>
+<ol start="2">
+<li><p>The individual pages of posts all have the same url as the author page, ending in <code>?page&#61;N</code>, where <code>N</code> is a number <code>0:7</code>.</p>
+</li>
+</ol>
+<p>So really, all I need to do is download each of those pages, search for all of the <code>webeasties</code> urls, and then download all of <em>those</em> pages.</p>
+<p>Pretty simple. The code in this post is all run with julia Version 1.6.0-DEV.1722 &#40;2020-12-09&#41; &#40;but should work on any julia v1&#41;. project files <a href="content/juliaprojects/webscrape/">can be found here</a>. In code blocks below, I have a mix of script-like and REPL commans, the latter are just to easily show outputs. I do most of my julia coding and running using the <a href="https://www.julia-vscode.org/">VS Code julia extension</a>.</p>
+<h3 id="looping_through_author_pages"><a href="#looping_through_author_pages" class="header-anchor">Looping through author pages</a></h3>
+<p>Since each author page has the same url save one number, I just cycled through them in a loop of the numbers. In each case, I downloaded the page into a temporary file, scan it for <code>webeasties</code> urls, and store them in a set.</p>
+<p>Note: you should really never use Regex to parse an HTML file, but I&#39;m not <em>really</em> parsing them, I actually am looking for a simple pattern.</p>
+<pre><code class="language-julia">projectdir &#61; joinpath&#40;pwd&#40;&#41;, &quot;_literate&quot;, &quot;webeasties&quot;&#41;</code></pre><pre><code class="plaintext code-output">AssertionError: sourcepath !== nothing
+</code></pre>
+<pre><code class="language-julia">using Downloads: download
+
+posturls &#61; Set&#40;String&#91;&#93;&#41;
+baseurl &#61; &quot;https://scienceblogs.com/author/kbonham?page&#61;&quot;
+
+# for p in 0:7
+for p in 0:0
+    tmp &#61; download&#40;baseurl*string&#40;p&#41;&#41;
+    for line in eachline&#40;tmp&#41;
+        for m in eachmatch&#40;r&quot;href&#61;\&quot;&#40;/webeasties&#91;\w/\-&#93;&#43;&#41;\&quot;&quot;, line&#41;
+           push&#33;&#40;posturls, m&#91;1&#93;&#41;
+        end
+    end
+end
+
+first&#40;posturls, 5&#41;</code></pre><pre><code class="plaintext code-output">ArgumentError: Package Downloads [f43a241f-c20a-4ad4-852c-f6b1247861c6] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+</code></pre>
+<pre><code class="language-julia">length&#40;posturls&#41; # for the full set, this is 191</code></pre><pre><code class="plaintext code-output">UndefVarError: posturls not defined
+</code></pre>
+<p>Explanation of regex:</p>
+<ul>
+<li><p><code>href&#61;\&quot;/webeasties</code>: hoepfully self-explanatory, the <code>href</code> looks specifically for links, and the <code>&quot;</code> needs to be escaped.</p>
+</li>
+<li><p><code>&#91;\w/\-&#93;&#43;</code>: match any number of word &#40;<code>a-z</code>, <code>A-Z</code>, <code>0-9</code>, and <code>_</code>&#41; characters, forward slashes or dashes</p>
+</li>
+<li><p><code>\&quot;</code> closing out the string.</p>
+</li>
+</ul>
+<h3 id="downloading_html_pages"><a href="#downloading_html_pages" class="header-anchor">Downloading html pages</a></h3>
+<p>The next bit is using the same idea, except I suspected &#40;correctly&#41; that getting the parsing right would take me a few tries. So rather than fetch each page dynamically and parse it, I decided to save the html pages to a more permanent location.</p>
+<p>In addition, I wanted to include the date and title in the file names, but not separate by directory, so I did a bit of parsing of the parent url to generate the new string with the date included.</p>
+<p>Finally, I also put in a short <code>sleep&#40;&#41;</code> to pause the loop so the site doesn&#39;t think it&#39;s being DDOS&#39;ed. Not that ~200 requests is all that heavy a load, but it&#39;s an old site, and I didn&#39;t really notice the difference, since I could write what I did while I was waiting.</p>
+<pre><code class="language-julia">htmlout &#61; joinpath&#40;projectdir, &quot;html_out&quot;&#41;
+isdir&#40;htmlout&#41; || mkdir&#40;htmlout&#41;
+
+# this post wasn&#39;t available anymore, so I removed it
+setdiff&#33;&#40;posturls, Set&#40;&#91;&quot;/webeasties/2010/12/26/weekend-review-all-about-the-g&quot;&#93;&#41;&#41;
+posturls
+
+for url in posturls
+    m &#61; match&#40;r&quot;^/webeasties/&#40;\d&#123;4&#125;/\d&#123;2&#125;/\d&#123;2&#125;&#41;/&#40;&#91;\w/\-&#93;&#43;&#41;&#36;&quot;, url&#41;
+    isnothing&#40;m&#41; &amp;&amp; error&#40;&quot;url &#36;url doesn&#39;t match&quot;&#41;
+    dt, title &#61; m.captures
+    dt &#61; replace&#40;dt, &#39;/&#39;&#61;&gt;&quot;&quot;&#41; # remove /, so eg 2013/01/25 becomes 20130125
+    file &#61; &quot;&#36;&#40;dt&#41;_&#36;title.html&quot;
+
+    # skips files that already exist since I ran into some errors, I didn&#39;t want to re-do them
+    isfile&#40;joinpath&#40;htmlout, file&#41;&#41; || download&#40;&quot;https://scienceblogs.com&quot; * url, joinpath&#40;htmlout, file&#41;&#41;
+    sleep&#40;0.1&#41;
+end</code></pre><pre><code class="plaintext code-output">UndefVarError: posturls not defined
+</code></pre>
+<p>Alright, I have a bunch of <code>html</code> files, what now?</p>
+<h2 id="parsing_posts"><a href="#parsing_posts" class="header-anchor">Parsing posts</a></h2>
+<p>h/t: For this section, I got a bunch of inspiration <a href="https://hyphaebeast.club/writing/julia-web-scraping/#html-as-xml">from here</a>.</p>
+<p>There&#39;s a bunch of <a href="https://jel.jewish-languages.org/words/503">schmutz</a> in these html documents used for ads, SEO, and linking around the site, none of which I want. So my task in this section is to pull out just the main post content, any other relavent info &#40;like title etc&#41;, and put them into a markdown file.</p>
+<p>Here, I&#39;m using the <a href="https://juliaio.github.io/EzXML.jl/stable/manual/#XPath-1"><code>EzXML.jl</code></a> package and its <a href="https://www.w3schools.com/xml/xpath_intro.asp">XPath</a> query ability to parse and search my <code>.html</code> files &#40;the HTML spec is just a flavor of XML&#41;.</p>
+<h3 id="a_note_on_writing_loops"><a href="#a_note_on_writing_loops" class="header-anchor">A note on writing loops</a></h3>
+<p>When I&#39;m going to do something in a loop like this, knowing it&#39;s going to take me a while to figure out exactly what to do, I&#39;ll often pull some examples first.</p>
+<p>For example, knowing I have an array of html file paths, and that I&#39;m going to loop through them with <code>for p in paths</code>, the first thing I do is pull out just one example to work on.</p>
+<pre><code class="language-julia">using EzXML
+
+paths &#61; readdir&#40;htmlout, join&#61;true&#41;
+p &#61; first&#40;paths&#41; # for p in paths
+
+post &#61; readhtml&#40;p&#41;
+doc &#61; root&#40;post&#41;
+# ...
+
+# end</code></pre><pre><code class="plaintext code-output">ArgumentError: Package EzXML [8f5d6c58-4d21-5cfd-889c-e3ad7ee6a615] is required but does not seem to be installed:
+ - Run `Pkg.instantiate()` to install all recorded dependencies.
+
+</code></pre>
+<p>This way, once I get it working on one instance, I can just delete the first line, uncomment the <code>for</code> loop bits, and then run it on the whole thing. I put in validation checks that throw errors if something violates my assumptions &#40;like the fact there should only be one <code>content</code> and one <code>title</code> node&#41; so that the loop will break and tell me where to look to fix my assumptions.</p>
+<h3 id="getting_stuff_with_xpath"><a href="#getting_stuff_with_xpath" class="header-anchor">Getting stuff with XPath</a></h3>
+<p>My process here was not particularly fancy - I went to the first post on the web, copied the title and first couple of words of content, then went to the html file and searched for them. Happily, they appear in blocks that have unique selectors. Actually, the title is in two places:</p>
+<pre><code class="language-html">&lt;title&gt;Why every &amp;quot;OMG we&amp;#039;ve cured cancer&#33;&#33;&amp;quot; article is about melanoma | ScienceBlogs&lt;/title&gt;
+
+&lt;h1 class&#61;&quot;page-header&quot;&gt;&lt;span&gt;Why every &amp;quot;OMG we&amp;#039;ve cured cancer&#33;&#33;&amp;quot; article is about melanoma&lt;/span&gt;</code></pre>
+<p>The <code>&lt;title&gt;</code> one is easier to grab, so I just went with that. XPath lets you look for any node named &quot;title&quot;, wherever it is. Just to be sure there really is only one node, I also made sure to check the length of the returned value.</p>
+<pre><code class="language-julia">title &#61; findall&#40;&quot;//title&quot;, doc&#41; # could have done &#96;findfirst&#96; instead, but then couldn&#39;t check if it&#39;s unique
+length&#40;title&#41; &#33;&#61; 1 &amp;&amp; error&#40;&quot;Expected only 1 title block, got &#36;&#40;length&#40;title&#41;&#41; from &#36;p&quot;&#41;
+title &#61; first&#40;title&#41; # get it out of the array
+
+title.content</code></pre><pre><code class="plaintext code-output">UndefVarError: doc not defined
+</code></pre>
+<p>The post itself is wrapped in <code>&lt;div class&#61;&quot;content&quot;&gt;</code>, which we can also easily find with XPath:</p>
+<pre><code class="language-julia">body &#61; findall&#40;&quot;//div&#91;@class&#61;\&quot;content\&quot;&#93;&quot;, doc&#41;
+length&#40;body&#41; &#33;&#61; 1 &amp;&amp; error&#40;&quot;Expected only 1 content block, got &#36;&#40;length&#40;body&#41;&#41; from &#36;p&quot;&#41;
+body &#61; first&#40;body&#41;
+
+body.content</code></pre><pre><code class="plaintext code-output">UndefVarError: doc not defined
+</code></pre>
+<p>One issue with using the content here is that, in html, links are nested elements inside other elements. In the <code>body.content</code>, those links are stripped out. For example, up above, <code>I went to a seminar at TSRI that...</code> in the <code>content</code> string is actually <code>I went to a seminar at &lt;a href&#61;&quot;http://www.scripps.edu/e_index.html&quot;&gt;TSRI &lt;/a&gt;that...</code> in the original html.</p>
+<p>But, not to worry, those <code>&lt;a&gt;</code> links are just additional nodes in the original <code>&lt;div class&#61;&quot;content&quot;&gt;</code> node, so we can just find them with XPath. The <code>body</code> node can still search the whole tree, so we use <code>.//</code> to search inside this node</p>
+<pre><code class="language-julia">links &#61; findall&#40;&quot;.//a&#91;@href&#93;&quot;, body&#41;
+
+length&#40;links&#41;</code></pre><pre><code class="plaintext code-output">UndefVarError: body not defined
+</code></pre>
+<p>But there are only 10 links in the post. It turns out there are some tags inside the <code>body</code> node that have their own links. So instead, I grab the first nested <code>div</code>, and then search inside that.</p>
+<pre><code class="language-julia">post &#61; findfirst&#40;&quot;./div&quot;, body&#41;
+links &#61; findall&#40;&quot;.//a&#91;@href&#93;&quot;, post&#41;
+
+length&#40;links&#41;</code></pre><pre><code class="plaintext code-output">UndefVarError: body not defined
+</code></pre>
+<pre><code class="language-julia">post.content # this ends up being a little nicer too</code></pre><pre><code class="plaintext code-output">UndefVarError: post not defined
+</code></pre>
+<p>What about those tags? They&#39;re inside the <code>body</code> node in a <code>&lt;div class&#61;&quot;field--item&quot;&gt;</code> node. To get the tag, and do a bit of validation in case the organization is different, I decided to parse the link inside that <code>div</code> node. That is, take something like</p>
+<pre><code class="language-html">&lt;div class&#61;&quot;field--item&quot;&gt;&lt;a href&#61;&quot;/tag/other-uses-immune-system&quot; hreflang&#61;&quot;en&quot;&gt;Other uses of the immune system&lt;/a&gt;&lt;/div&gt;</code></pre>
+<p>And get the link <code>&quot;/tag/other-uses-immune-system&quot;</code>, so that I could make sure it starts with <code>/tag/</code>.</p>
+<pre><code class="language-julia">function gettags&#40;body&#41;
+    tags &#61; String&#91;&#93;
+    tagnodes &#61; findall&#40;&quot;.//div&#91;@class&#61;\&quot;field--item\&quot;&#93;&quot;, body&#41;
+    for tagnode in tagnodes
+        a &#61; findfirst&#40;&quot;./a&#91;@href&#93;&quot;, tagnode&#41;
+        link &#61; first&#40;attributes&#40;a&#41;&#41;.content
+        m &#61; match&#40;r&quot;^/tag/&#40;&#91;\w\-&#93;&#43;&#41;&#36;&quot;, link&#41;
+        isnothing&#40;m&#41; &amp;&amp; error&#40;&quot;Expected tag, got &#36;link&quot;&#41;
+        push&#33;&#40;tags, m.captures&#91;1&#93;&#41;
+    end
+    return tags
+end
+
+gettags&#40;body&#41;</code></pre><pre><code class="plaintext code-output">UndefVarError: body not defined
+</code></pre>
+<h2 id="conclusion"><a href="#conclusion" class="header-anchor">Conclusion</a></h2>
+<p>So now we have all the pieces, I&#39;ll save converting the posts to markdown for the <a href="/posts/2021/webeasties-2">next post</a>.</p>
+
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+     <script src="/libs/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+ 
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

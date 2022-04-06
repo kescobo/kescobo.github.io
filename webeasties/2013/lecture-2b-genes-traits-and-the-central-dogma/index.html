@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Lecture 2b: Genes, Traits and the Central Dogma.</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Lecture 2b: Genes, Traits and the Central Dogma.</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>&#91;This past fall, I <a href="http://scienceblogs.com/webeasties/2012/08/28/plagues-and-pandemics-emerson-sc-214/">taught a course</a> at Emerson College called &quot;Plagues and Pandemics.&quot; I&#39;ll be periodically posting the contents of my lectures and my experiences as a first time college instructor&#93;</p>
+<p>In my <a href="http://scienceblogs.com/webeasties/2012/09/10/lecture-1-why-is-science-awesome-emerson-sc214/">first lecture</a>, I used Powerpoint &#40;well, technically Keynote&#41;, but I personally like chalk-talks a quite a bit more. Never mind the fact that classrooms never seem to have chalk boards any more, I like taking the time to write out important points, draw diagrams on the fly and connect with the material a bit more than just clicking through to the next slide. My students did not agree. My second lecture &#40;of which this post is part 2&#41;, I gave as a chalk-talk on a white-board, but when polled afterwards there was near-universal agreement that slideshows were better. I&#39;m not sure if this is because they like being able to download the slides after the fact or if they just want to be able to skip class and still have notes, but I relented and gave in - all of my other lectures were delivered via keynote, and in future blog posts I&#39;ll try to incorporate the diagrams I made for those presentations.</p>
+<p>In order to prevent students from skipping class and just using the presentations &#40;I put all the slideshows up on<a href="https://docs.google.com/folder/d/0BxSnFgYDpKq9akttU1NodlQ1Y3c/edit"> google drive</a> after the fact&#41;, and also because I think it&#39;s generally good presentation form, I tried to put very little text into my slides. As with many things this semester, those best-practices fell off a bit towards the end of the course as stuff kept piling up, but ultimately I think it worked out ok. In future posts, I&#39;ll post direct links to .pdf&#39;s of all of the lectures I gave &#40;the link above is where they can all be found&#41;, but since this was all hand-written notes, you&#39;ll have to settle with just the text one more time.</p>
+<p><a href="http://scienceblogs.com/webeasties/2012/12/22/lecture-2a-intro-to-evolution/ ">Last time</a>, I talked about Darwin&#39;s Origin of Species, and why this seminal work means that Darwin gets most of the credit for the theory of evolution by natural selection, despite the fact that none of the core ideas were, strictly speaking, new. But Darwin&#39;s insights, profound as they were were missing one crucial piece - how the traits of individual organisms are passed on to their offspring. That&#39;s where Gregor Mendel comes in.</p>
+<p>Lecture 2b &#40;reading: Zimmer - The Tangled Bank, chapters 1-2 and chapter 5&#41;:</p>
+<p>It had long been known that features of parents get passed on to their offspring. Animal and plant breeders had been meticulously exploiting this fact for millennia before Gregor Mendel, a monk from a tiny town in what is now the Czech Republic, began his experiments. The trouble was, they didn&#39;t understand how those traits were passed on. I don&#39;t mean that they were unfamiliar with the molecular basis of inheritance &#40;DNA and proteins&#41; - those things wouldn&#39;t begin to be revealed until almost a century after Mendel. They didn&#39;t even understand the relationship between parents and offspring.</p>
+<p>Many natural historians at the time believed in &quot;<a href="http://en.wikipedia.org/wiki/Blending_inheritance">blending inheritance</a>,&quot; that traits from mother and father would blend together and produce something like an average of the traits in the offspring. So, if a dog with a dark brown coat breeds with a dog with a very light brown coat, the puppies should have medium brown coats. Things like this often happen, and without our modern understanding of genetics, it seems like a reasonable assumption. There are a couple of problems with this hypothesis, however. First, two medium-brown dogs can breed producing offspring that are dark brown, medium brown and light brown - blending inheritance would predict that all of the offspring would be medium brown. The other problem, especially germaine to evolution, is that blending inheritance would predict that over several generations, all organisms of a given species would end up essentially the same.</p>
+<p>Imagine 20 glasses all filled with liquids of different colors &#40;or different shades of colors&#41;. Now imagine you mix half of two different glasses together, and do that until you have 20 new glasses with mixtures of the &quot;parents.&quot; In this 2nd generation, you&#39;d probably still have a bunch of variation, but if you keep mixing, eventually all of the glasses will be exactly the same color - you can&#39;t maintain variation if you&#39;re constantly blending traits together.</p>
+<p>Blending inheritance - Source: wikipedia</p>
+<p>Variation within populations of organisms was essential to Darwin&#39;s theory of natural selection. Furthermore, blending inheritance would make the arrival of new characteristics - essential to the notion of common ancestry - essentially impossible. Any beneficial mutation would be rapidly diluted out by mixing with all of the unchanged members of the population.</p>
+<p>Mendel&#39;s Peas</p>
+<p>There&#39;s no indication that Mendel was aware of Darwin&#39;s work, but he did understand the problems with blending inheritance, and so he set out to understand the rules governing inheritance through a painstaking series of experiments. Mendel&#39;s organism of choice was the pea plant &#40;Pisum sativum&#41;, because of it&#39;s ability to breed true. Similar to the idea of true bred dogs, the ability of an organism to breed true essentially means that offspring have traits almost identical to their parents. In dogs, this is accomplished by consistently breeding only with other true breds. In peas, this happens as a matter of course - the flowers of the plants are closed, meaning that an individual plant only ever pollinates itself, and so the plants essentially only breed with themselves - there&#39;s no &quot;out-crossing&quot; or mixing with other lines. For mathematical reasons that I won&#39;t go into here &#40;ask in the comments if you&#39;re interested&#41;, true breeding plants, as with animals, tends to lead to lack of genetic diversity within the genome. Mendel didn&#39;t know about genes, but he did know that he could use the true-breeding plants to determine the rules governing inheritance.</p>
+<p>Click for source</p>
+<p>To do this, Mendel meticulously cross bred different varieties of peas, and tracked their offspring. In order to prevent accidental breeding, Mendel would slice open the flowers of each plant with a scalpel, and carefully clip the stamen &#40;the male sex-organ&#41; before they had developed. In order to make the cross, he would open the flower of a separate plant, and then use a paint-brush to transfer pollen from one plant to another. This would be tedious to do once or twice, but over the course of his experiments, Mendel cultivated over 20,000 pea plants&#33;</p>
+<p>By comparing the &quot;phenotype,&quot; or outward traits of the parent plants and their offspring, Mendel noticed a few recurring patterns. For example, when he crossed true-breeding plants that produced yellow peas to true-breeding plants producing green peas, all of the offspring produced yellow peas. This was not some yellowish-green blending of the two parents, these peas were just as yellow as the original true-bred parent. However, despite the fact that their outward appearance was the same as one parent, the hybrids were clearly different. Mendel allowed these hybrid offspring to breed with themselves &#40;no scalpel or paintbrush needed this time&#33;&#41;, and again looked at the offspring.</p>
+<p>Source</p>
+<p>What he discovered is that the hybrid yellow peas produced a mixture of offspring - some yellow and some green. And again, the greens and yellows were as green or yellow as the original true bred variety, not a mixture. Mendel saw this pattern over and over again, with the shape of seeds &#40;round or wrinkled&#41;, the height of the plants &#40;tall or dwarf&#41;, flower color &#40;purple or white&#41; etc. These observations led Mendel to hypothesize the &quot;Law of Segregation,&quot; which stipulates that a trait is built out of discrete units, and that different versions are segregated into the sex cells that go on to produce offspring. He also noted that these traits were inherited independently of other traits - in other words, it didn&#39;t matter if he had a true-bred plant with yellow peas and purple flowers or yellow peas and white flowers - the color of the flower and the color of the peas were completely separate. This observation is the foundation of Medel&#39;s second law, the &quot;Law of Independent Assortment.&quot;</p>
+<p>If you&#39;re having flashbacks to high-school biology, you might remember something about the ratios of offspring, &quot;dominance&quot; or &quot;recessiveness,&quot; and things called Punnett squares, but I&#39;ll leave it to your googling skills if you really want a refresher. The important thing for the purposes of this course is that Mendel proved that traits &#40;and their causes - what we now know are genes&#41;, are inherited as discrete units, not as a simple blending of the traits of the parents.</p>
+<p>Based on what we now know about genes, DNA and inheritance, Mendel seems profoundly lucky to have chosen pea plants as his experimental model. There are lots of traits that are under the control of many different genes, and would have been very difficult to understand with the knowledge and tools Mendel had to work with. Furthermore, peas, like people and most animals, are diploid, which means they have two copies of every gene - this means that the math governing how traits were passed down was &#40;relatively&#41; trivial. But lots of plants are polyploid &#40;they have several copies of each gene&#41;, and would have been incredibly difficult to interpret. But whether through genius or blind luck &#40;Mendel seems to have had generous helpings of both&#41;, Mendel&#39;s experiments worked and he interpreted them correctly, but it would take another 50 years for biologists to put together Mendel&#39;s laws of inheritance with Darwin&#39;s theory of natural selection, and fill in the gaps with the newly emerging field of molecular biology to arrive at our modern understanding of biology - a process known as &quot;<a href="http://en.wikipedia.org/wiki/Modern_synthesis">The Modern Synthesis</a>&quot;</p>
+<p>The Central Dogma</p>
+<p>When I taught this course last semester, I included in this second lecture an introduction to what biologists call &quot;the central dogma.&quot; This is our modern understanding of how genes lead to traits. However, it was clear after teaching this section that it didn&#39;t make any sense, unmoored from anything tangible, so I&#39;m going to leave it alone for now and come back to it when we start to talk about basic cell biology and the organization of multicellular life in the next lecture.</p>
+<h2>Post Images</h2>
+<ul>
+<li><p><img src="/_assets/img/webeasties/pisum-sativum-structure.jpeg" alt="Image at http://images.tutorvista.com/content/angiosperm-families/pisum-sativum-structure.jpeg" /></p>
+</li>
+<li><p>Missing image: Image at http://1.bp.blogspot.com/<em>qE8rf3Kb4fI/SPfO5-dEivI/AAAAAAAABYI/VK7P2lDTAic/s400/peaalternating.jpg | http://1.bp.blogspot.com/</em>qE8rf3Kb4fI/SPfO5-dEivI/AAAAAAAABYI/VK7P2lDTAic/s400/peaalternating.jpg</p>
+</li>
+</ul>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

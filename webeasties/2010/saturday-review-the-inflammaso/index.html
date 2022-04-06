@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Saturday Review: The Inflammasome!</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Saturday Review: The Inflammasome!</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>This week, I&#39;m going to take a<a href="http://scienceblogs.com/webeasties/2010/11/saturday_review_oral_&#91;vaccines&#93;&#40;http://scienceblogs.com/webeasties/2010/11/vaccine_delivery_from_an_immun.php&#41;.php"> break</a> from vaccines and do some innate immunity. Today&#39;s topic: the provocatively named &quot;Inflammasome.&quot; <a href="http://goo.gl/efEoL">This Nature Review</a> from last month focused on inflammasomes and anti-viral immunity, but I think the inflammasome itself needs its own post.</p>
+<p>A breakthrough in our understanding of the mechanisms that control the activation of inflammatory caspases came from the identification and characterization of the inflammasome, a large &#40;~700 kDa&#41; multiprotein complex that recruits inflammatory caspases and triggers their activation. Inflammasomes are often defined by their constituent PRR family member, which functions as a scaffold protein to bring caspase-1 molecules together and mediate proximity-induced auto-activation of caspase-1.  I&#39;m going to spend this entire post trying to explain that one paragraph. Let&#39;s start at the beginning.</p>
+<p>Note: the TL;DR version below</p>
+<p>When immune cells like macrophages encounter bacteria and viruses they have a few typical responses, and one of the most important responses is the production of pro-inflammatory cytokines. <a href="http://en.wikipedia.org/wiki/Cytokine">Cytokines</a> are signaling proteins of the immune system; they are secreted by cells to communicate information to other cells. Pro-inflammatory cytokines then, are cytokines that induce inflammation. There are a lot of pro-inflammatory cytokines produced by macrophages, with names like tumor necrosis factor &#40;<a href="http://en.wikipedia.org/wiki/Tumor_necrosis_factor-alpha">TNF</a>&#41;, interleukin 1 and interleukin 6 &#40;IL-1 and IL-6&#41;. If a macrophage sees a bacterium, it will make TNF, IL-1 and IL-6 &#40;along with many others&#41;. If it sees viruses, it will make all the same cytokines &#40;and some others&#41;. But in order to study how this works, scientists started to use purified ligands to make things easier. If I want to study how a particular receptor &#40;like <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_1.php">TLR4</a>&#41; works, I don&#39;t want to use whole bacteria - they have a ton of different molecules that might activate tons of different receptors, and I wouldn&#39;t be able to tell what TLR4 itself was doing.</p>
+<p>So instead I use purified lipo-poly saccharide &#40;LPS&#41;, which is a molecule that uniquely activates TLR4 &#40;also called a &#40;ligand&quot;&#41;. But when scientists first started using these ligands, they noticed something weird. If they measured what the cells secreted, they found TNF and IL-6, but no IL-1. When they looked inside the cells, on the other hand, there was plenty of IL-1. So there was no problem with the production of IL-1, it just wasn&#39;t getting out of the cell.</p>
+<p>This is where I need to talk about caspases. <a href="http://en.wikipedia.org/wiki/Caspase">Caspases</a> are a large family of proteases - which means they cut other proteins. Some proteases are fairly non-specific, they&#39;ll chew up lots of different proteins at lots of different places. Caspases are much more specific; they are very particular about what proteins they cut, and where those cuts are made. It turns out that when IL-1 is made, it&#39;s made in a immature form called pro-IL-1 that can&#39;t be secreted until it&#39;s cleaved in half by caspase-1. Once this happens, IL-1 can make its way out of the cell and do its thing. But there&#39;s always some caspase-1 in the cell, so why isn&#39;t pro-IL-1 cleaved immediately?</p>
+<p>In general, caspases do very dangerous things. Inflammation triggered by IL-1 can be very destructive, so it needs to be kept in check &#40;more on that later&#41;, and other caspases are involved in the signaling cascade that causes cell suicide &#40;apoptosis&#41;. This means that caspases need to be tightly regulated, so caspases are first made in an inactive form: pro-caspase. Just like IL-1, in order to be fully active, a caspase must be cut by another protease &#40;usually another caspase&#41;.  This is where the inflammasome comes in. It&#39;s just a fancy name given to a large complex of proteins whose function is to activate caspase-1 and allow inflammation. Inflammasome assembly is initiated by a pattern recognition receptor &#40;PRR&#41; binding to its ligand. This allows the PRR to recruit a protein called ASC, which then recruits a bunch of pro-caspase-1 molecules, forming a wheel-like structure &#40;where caspase-1 forms the spokes&#41;. When a lot of caspase-1 is forced into close proximity by the inflammasome, they are able to cleave each other, activating the whole complex &#40;as soon as one gets cleaved and activated, it will immediately cleave and activate all of its neighbors&#41;. Once the complex is activated, it can go on to cleave any pro-IL-1 in the cell, and allow it to be secreted. </p>
+<p>&#91;Adapted from <a href="http://www.nature.com.ezp-prod1.hul.harvard.edu/nri/journal/v8/n5/fig_tab/nri2296_F2.html">doi:10.1038/nri2296</a>&#93;</p>
+<p>TL;DR version: PRR assembles inflammasome –&gt; inflammasome activates caspase-1 –&gt; caspase-1 activates IL-1 –&gt; IL-1 gets secreted.</p>
+<p>You may be wondering, &quot;why is any of this necessary?&quot; It&#39;s hard to definitively answer &quot;why&quot; questions in biology, but one idea is the danger hypothesis. Our bodies are swarming with bacteria, fungi and viruses, but most of them won&#39;t end up doing any harm. The pattern-recognition receptors of the innate immune system can&#39;t distinguish between the good guys and the bad guys. The inflammasome is triggered by signals of danger &#40;DNA in the cytoplasm and membrane damage for instance&#41;, so if a cell sees a bacteria, and there&#39;s some signal that something is wrong, you want to induce inflammation, but if there&#39;s only bacteria, but no danger, or there&#39;s danger but no pathogen, inflammation can be destructive.</p>
+<p>The inflammasome was only discovered in 2002, so there&#39;s a lot we don&#39;t know, but it&#39;s a fascinating and complex field. Take a look at that first paragraph and see if it makes sense now. If it still doesn&#39;t, please let me know, I&#39;m still working on how to explain complex topics like this. Too much detail? Too little?</p>
+<p>Kanneganti, T. &#40;2010&#41;. Central roles of NLRs and inflammasomes in viral infection Nature Reviews Immunology, 10 &#40;10&#41;, 688-698 DOI: <a href="review">10.1038/nri2851</a></p>
+<h2>Post Images</h2>
+<ul>
+<li><p><img src="/_assets/img/webeasties/Screen&#37;20shot&#37;202010-11-20&#37;20at&#37;205.39.49&#37;20PM.png" alt="Image at http://scienceblogs.com/webeasties/Screen&#37;20shot&#37;202010-11-20&#37;20at&#37;205.39.49&#37;20PM.png" /></p>
+</li>
+</ul>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

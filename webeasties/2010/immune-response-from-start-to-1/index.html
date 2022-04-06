@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Immune Response from Start to Finish: Part 1</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Immune Response from Start to Finish: Part 1</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>&#91;I&#39;ve been hooked on the immune system since I was a kid and my dad showed me electron micrographs of macrophages eating bacteria in Scientific American. Now that I&#39;m in graduate school studying immunology, and macrophages in particular, <a href="http://webeasties.wordpress.com/2010/05/26/pattern-recognition-and-innate-immunity/#comment-124">my dad asked</a> if I could give a play-by-play of an immune response. Here you go Dad:&#93;</p>
+<p>Part 1: Invasion and detection, the innate immune system</p>
+<p>Most immunology classes I&#39;ve taken have begun with a simple, but profound truth: the best immune response is one that prevents pathogens from ever gaining entry &#40;pathogen &#61; disease-causing organism&#41;. Hence, we are covered in barriers. Skin is the most obvious example of a barrier - it&#39;s water-tight, protected by layers of dead cells and covered in things called anti-microbial peptides which are basically tiny protein antibiotics.But other bits of our body can&#39;t be sealed off so completely - the mucosal tissues lining our oral, nasal, genital and gastrointestinal tracts all have to be permeable to carry out their functions - our lungs for instance, which are exposed to the microbial world every time we breathe, would be useless if they were asÂ impenetrableÂ as skin&#33; But that doesn&#39;t mean these tissues are defenseless - they are composed of specializedÂ epithelial cells, which form &quot;tight-junctions,&quot; and secrete mucous and anti-microbial peptides in an effort to be inhospitable.</p>
+<p>But these barriers are far from perfect. Evolution has forced compromise - skin is elastic to allow for ease of movement, but that means it&#39;sÂ susceptibleÂ to getting cut; the gut epithelium isÂ permeableÂ to nutrients, but also to microbes. In addition, pathogens are masters at subverting even our best defenses &#40;in fact, this is sort of a theme in immunology - we know something is important if we find a pathogen that has learned to get around it&#41;. So, once a bug gets past past the initial barriers, what&#39;s next? The immune system needs to know that something is wrong, and that&#39;s where pattern recognition comes in.</p>
+<p>Pattern recognition receptors are what I study, so I&#39;ll be posting more on this topic, but I&#39;ll mention a few things briefly here. Every cell in the body has specialized receptors to detect invading pathogens. These receptors are called pattern-recognition receptors &#40;PRRs&#41; because they recognize parts of pathogens called &quot;PAMPs&quot; - pathogen-associated molecular patterns. All organisms are made of the same basic building blocks &#40;proteins, nucleic acid, lipids and carbohydrates&#41;, but bacteria and viruses have some features that are unique, and can therefore be recognized as foreign. Double-stranded RNA, for instance, is never present in the absence of a viral infection. Lipopolysaccharide &#40;LPS&#41; is a sugar that is found in bacterial cell walls, but not in mammals. Not all cells express every PRR, but most cells can at least recognize internally if they get infected.</p>
+<p>There are other specialized cells, like macrophages, that are professional pathogen seekers. Macrophages express pattern recognition receptors on their cell-surface called Toll-like receptors &#40;TLRs&#41; that can recognize external bacteria and viruses. The macrophages can then eat the intruders as well as release signals called cytokines that cause inflammation and alert nearby cells of the danger. Inflammation also triggers the influx of neutrophils from the bloodstream - these cells are likeÂ kamikazes, eating and destroying everything in their path.Â Another cell type, natural killer &#40;NK&#41; cells, can recognize signs of infection and stress and force those cells to commit suicide.</p>
+<p>These events are enough to clear the vast majority of potential infections, and you would never notice any symptoms. These responses are called the innate immune system, because it&#39;s more or less present in the same form at birth. And the response very general, most viruses and most bacteria will be dealt with in essentially the same way. But real pathogens are sneaky, and they know how to get around these defenses. In Part 2, I&#39;ll talk about the adaptive immune system and the generation of highly specific, coordinated responses to clear prolonged infections.</p>
+<p>Immune response from start to finish, the series</p>
+<p>Part 1: Invasion and detection: Innate immunity &#40;current&#41;<a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_2.php">Part 2: T-cells, B-cells and adaptive immunity</a><a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to.php">Part 3: Immune Memory</a><a href="http://scienceblogs.com/webeasties/2010/11/implications_of_the_immune_res.php">Implications of the Immune Response</a></p>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

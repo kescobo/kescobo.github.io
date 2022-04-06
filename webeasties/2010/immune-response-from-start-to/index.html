@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Immune Response from Start to Finish: Part 3</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Immune Response from Start to Finish: Part 3</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>&#91;I&#39;ve been hooked on the immune system since I was a kid and my dad showed me electron micrographs of macrophages eating bacteria in Scientific American. Now that I&#39;m in graduate school studying immunology, and macrophages in particular, <a href="http://webeasties.wordpress.com/2010/05/26/pattern-recognition-and-innate-immunity/#comment-124">my dad asked</a> if I could give a play-by-play of an immune response. Here you go Dad:&#93;</p>
+<p>Part 3: Immune memory</p>
+<p>Towards the end of the 18th century, Edward Jenner did an experiment. It had long been known that people who had been infected with smallpox, if they managed to survive &#40;no easy feat&#41;, would be resistant to further infection. People would even give small inocula of smallpox to healthy people in an effort to prevent a more serious infection &#40;though this wasn&#39;t very controlled and would often lead to serious illness and death&#41;. But there was also anecdotal evidence that milkmaids, who were often afflicted by the much milder disease cowpox, were also resistant to smallpox. So, Jenner devised the hypothesis that cowpox was close enough to smallpox that it would teach the body how to fight both. And he tested it - by injecting James Fipps &#40;the 8 year old son of his gardener&#41; with puss from a cowpox sore. Unsurprisingly, the kid got cowpox, and when the infection cleared, Jenner then injected the same boy &#40;why this kid didn&#39;t run screaming, I will never understand&#41; with puss from someone with smallpox. Magically, the boy did not get small-pox. Thus, Jenner is credited with devising the first vaccine. In fact, the name vaccine comes from &quot;vacca,&quot; the latin word for cow.</p>
+<p>Even with all the &quot;controversy&quot; about vaccines, the fact is that they work. One of the benefits of being a chordate is that we have an <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_2.php">adaptive immune</a> system, and that branch of the immune system remembers. In the <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_2.php">last part</a>, I talked about the T-cells and B-cells of the adaptive immune system. These cells have special, randomized receptors, and each individual cell recognizes something unique. During the course of your life, you&#39;ll make hundreds of billions of different T cell and B-cell receptors, and most of them will never be used. But during an infection, some of the T and B cells will respond, and during that response, they will replicate. Most of the daughter cells will become effectors, and do all the disease-fighting things I talked about before, but a small percentage will become memory cells.</p>
+<p>At some point, all of those effector cells have to die off - if they didn&#39;t, after a couple times getting a cold, you&#39;d end up being a giant lymph node. But memory cells know they&#39;re important, and can survive for years or even decades. Because they were activated in the presence of an infection, they can be sure that their receptor recognized something foreign that is potentially dangerous. And if that something rears its head again, the memory cell can rapidly proliferate and produce new effector cells, all without waiting for a dendritic cell to say that it&#39;s ok. In addition, memory B-cells can continue to secrete antibodies, which patrol your bloodstream, just waiting to encounter that pathogen once again.</p>
+<p>This last bit is what makes vaccines possible. When Jenner infected James with cowpox, the boy&#39;s immune system responded. Dendritic cells from his skin grabbed bits of the cowpox virus and brought them to lymph nodes to show to T and B cells. Some of those T and B cells had receptors that could recognize those bits, and they expanded and differentiated to run off and battle the infection. Meanwhile, some of them held back and turned into memory cells, and the memory B cells in particular continued to churn out cowpox-specific antibodies. Weeks later, when Jenner inoculated him with smallpox, there were already millions of cowpox antibodies flying around his bloodstream. Since smallpox is closely related to cowpox, many of those antibodies could recognize the virus particles and bind to them, preventing them from infecting any of the boy&#39;s cells. If any viruses slipped by and actually infected a cell, the memory T cells would be alerted and blast the infected cell before it could make many new viruses. And if that cell did manage to make new viruses, those new viruses would also have to get by the antibody wall.</p>
+<p>That&#39;s the immune response in a nutshell. To recap: <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_1.php">Innate immunity</a> tags and bags most things that get past your barriers, then the adaptive immune response picks up the stuff that gets through, and remembers what infected you so that it can respond better the next time. That&#39;s how I learned it in my undergraduate immunology class. That&#39;s how it&#39;s being taught to the undergrads I&#39;m teaching now. Simple right?</p>
+<p>Well, not so fast. If it&#39;s that simple, why don&#39;t we have vaccines against the legions of bacterial infections that debilitate or kill people every year &#40;not to mention HIV&#41;, and why do we need a new flu vaccine every year? Why are over 90&#37; of adults chronically infected with various strains of herpes virus? And why are there billions of dollars to be made in drugs that slow the immune system down? I&#39;ll talk about some of the nuance and the complications of our sophisticated immune system next. Stay tuned.</p>
+<p>Immune response from start to finish series<a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_1.php">Part 1: Invasion and detection: Innate immunity</a><a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_2.php">Part 2: T-cells, B-cells and adaptive immunity</a></p>
+<p>Part 3: Immune Memory &#40;current&#41;<a href="http://scienceblogs.com/webeasties/2010/11/implications_of_the_immune_res.php">Implications of the immune response</a></p>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

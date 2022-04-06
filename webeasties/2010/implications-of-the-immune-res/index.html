@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Implications of the immune response</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Implications of the immune response</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>I started writing this post before I read <a href="http://scienceblogs.com/erv/2010/10/immunology--_isnt_it_maaaagikaaaaal.php">ERV dissecting</a> some &quot;the immune system is perfect&quot; BS. Go read hers, then come back if you want more.  Now that I&#39;ve <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_1">gone</a> <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_2/">through</a> the <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to/">basics</a> of a typical immune response, I think it&#39;s necessary to point out some of its many flaws. In many of the immunology courses I&#39;ve taken, the mammalian immune system is presented almost as the pinnacle of evolution, but it is far from perfect. In fact, in many ways, we might be better off if it had never evolved at all.</p>
+<p>First up - Autoimmunity. T-cells and B-cells generate random receptors that can in principal see any molecular shape, and that includes shapes that our own body produces. Intrinsically, T and B cells &#40;collectively called lymphocytes&#41; have no way of knowing if their receptor sees some virulent strain of E. coli or they myelin sheath of your own neurons. To counteract this problem, we have evolved elaborate mechanisms to promote immune tolerance of our own tissues. Developing lymphocytes are programed to self-destruct if their receptor binds something early on &#40;before they are likely to have seen a real pathogen&#41;, and they get turned off if they bind something in the absence of a danger signal &#40;usually provided by a pattern recognition receptor&#41;. There are also regulatory cells flying around the blood stream, tamping down runaway signals and trying to keep them quiescent.</p>
+<p>But these mechanisms often break down, and we have diseases like <a href="http://en.wikipedia.org/wiki/Multiple_sclerosis">multiple sclerosis</a>, <a href="http://en.wikipedia.org/wiki/Diabetes_mellitus_type_1">type-1 diabetes</a>, <a href="http://en.wikipedia.org/wiki/Rheumatoid_arthritis">rheumatoid arthritis</a>, <a href="http://en.wikipedia.org/wiki/Crohn&#39;s_disease">Crohn&#39;s disease</a>, <a href="http://en.wikipedia.org/wiki/Lupus_erythematosus">Lupus</a>, etc. In addition, there are so-called hyper-inflammatory disorders in which the immune system over-reacts to harmless molecules, yielding the wonderful trifecta of allergies, asthma, and <a href="http://en.wikipedia.org/wiki/Inflammatory_bowel_disease">IBD</a>.</p>
+<p>&quot;But surely,&quot; you say, &quot;those are rare side-effects of a system that, on balance, is protective.&quot; I&#39;m not so sure. The second obvious flaw with our immune system is that it doesn&#39;t actually protect us from the virulence of pathogens. This statement seems deeply counterintuitive &#40;especially coming from an immunologist&#41;, but hear me out. How many of you readers have never gotten sick? I feel pretty confident saying that no one raised their hand. &quot;But without an immune system, that pathogen would have killed me,&quot; you say, and this is sort of true. Certainly, people with compromised immune systems are at a much higher risk for death from fairly routine infections, but the real question is, if no one had an immune system, what would be the outcome?</p>
+<p>To understand this point, I think it helps to look at this from the pathogens&#39; perspective. What is the goal of a rhinovirus &#40;that might cause a cold&#41;, or Plasmodium falciparum &#40;which causes <a href="http://en.wikipedia.org/wiki/Malaria">malaria</a>&#41;, or <a href="http://en.wikipedia.org/wiki/Bacillus_anthracis">Bacillus anthracis</a> &#40;better known as anthrax&#41;? The goal is not &#40;necessarily&#41; to kill you. The goal is to maximize replication and transmission. And depending on the mode of transmission, there are different levels of virulence &#40;ability to make you sick&#41; that are more beneficial.</p>
+<p>Transmission of a cold virus occurs by person-to-person contact. You&#39;ll infect far more people if you&#39;re just sick enough to still go to work or go to buy groceries. If that rhinovirus made you as sick as malaria, you&#39;d never infect anyone. Plasmodium falciparum, on the other hand, has mosquito vectors that carry it around, and you&#39;re actually less of a threat to the mosquitos if you&#39;re incapacitated. It doesn&#39;t want to kill you, because then the parasite will die as well. People do die from malaria, but that&#39;s an unintended side effect, and in any case those people have probably already fed many mosquitos and passed the disease on. B. anthracis doesn&#39;t care if you die, but that&#39;s because its method of transmission doesn&#39;t depend on its host living. It just wants to replicate as much and as quickly as possible, devouring whatever nutrients it can get its hands on. If and when the host dies, Bacillus can form spores, which are extraordinarily hearty. They can withstand all kinds of extremes &#40;even autoclaves - the industrial sterilizers used in labs and hospitals won&#39;t kill Bacillus spores&#41;**, and can lay dormant for decades or even centuries millions of years&#33;, just waiting for a new hapless host to wander along.</p>
+<p>This whole idea is called virulence theory, and if you think about it, the best way to guess how virulent a pathogen will be is to look at its method of transmission. Of course, there are exceptions, but the exceptions aren&#39;t particularly successful pathogens. Several hemoragic fever viruses &#40;think Ebola&#41; spring up now and again and wipe out whole villages, but then they die off because they incapacitated and then killed their entire host supply too rapidly to make it to a neighboring village. But what does all this have to do with the immune system?</p>
+<p>Pathogens have evolved to expect an immune system, and they&#39;ve gauged their virulence accordingly. That&#39;s why an AIDS patient can die from a normally harmless bacterial infection - those bacteria expect push-back from an immune system that isn&#39;t there. But if we had never evolved immune systems, the pathogens wouldn&#39;t have evolved all of those ways around it, and we would all expend far less energy and arrive at the same outcome. This is a classic example of an <a href="http://en.wikipedia.org/wiki/Red_Queen&#39;s_Hypothesis">Red Queen</a> evolution - an arms race between competitors. And you can see it everywhere in life, from cheetahs and antelopes to hundred-foot tall redwood trees. And my larger point is not really that the immune system is useless - clearly it was beneficial enough to our ancestors to be worth the price of energy expenditure and potential autoimmunity. The larger point is that when I write &#40;as I often do&#41; about the ways that pathogens get around our high and mighty immune system, remember that these evasion strategies are the rule, not the exception.</p>
+<p>Immune response from start to finish series<a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_1.php">Part 1: Invasion and detection: Innate immunity</a><a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_2.php">Part 2: T-cells, B-cells and adaptive immunity</a><a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to.php">Part 3: Immune Memory</a></p>
+<p>Implications of the immune response &#40;current&#41;</p>
+<hr />
+<p>**Evidently, this is one of those things I heard at one point as an undergrad, and stupidly repeated here without double-checking. My bad - thanks for calling me out Tuco. I did find <a href="http://goo.gl/rlXvY">this cool paper</a> though &#40;free full text - check out the intro for the references&#41;:</p>
+<p>Endospores are dormant forms of bacteria that are stable for great lengths of time and are resistant to inactivation from radiation and heat. Bacillus spores are so resistant and hardy that they have been revived from the abdominal cavity of an extinct bee entombed within Dominican amber 25 to 40 million years ago and isolated from a brine inclusion dated at 250 million years old.</p>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

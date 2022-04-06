@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Bacterial ROS to the malaria rescue!</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Bacterial ROS to the malaria rescue!</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>You&#39;ve all heard of Malaria. It&#39;s bad. It infects hundreds of millions of people, <a href="http://www.cdc.gov/malaria/about/distribution.html">mostly in developing nations</a>. It rarely leads directly to death*, but the resulting illness can lay people out for days or weeks, increasing an already heavy economic burden on many of the poorest countries in the world.</p>
+<p>Folks from affluent regions can get medication to prevent or treat the illness, but treatments can be expensive and have <a href="http://en.wikipedia.org/wiki/Chloroquine#Adverse_effects">nasty side effects</a>, so it&#39;s not practical for most of the population. The good news is that Plasmodium, the parasite that causes the disease, can only be transmitted by mosquitoes, and <a href="http://www.cdc.gov/malaria/malaria_worldwide/reduction/itn.html">relatively simple measures</a> like insecticide-treated nets &#40;or more complicated solutions like <a href="http://www.ted.com/talks/nathan_myhrvold_could_this_laser_zap_malaria.html">targeted lasers</a>** to zap mosquitoes out of the sky&#41; can stop the spread.  These solutions reflect an obvious bias that we have: when it comes to malaria, mosquitoes are the enemy. They carry the parasite from an infected person to another victim. What doesn&#39;t occur to most people is that mosquitoes get infected too, and they might have evolved ways to slow the parasite down. Part of the parasites&#39;<a href="http://www.cdc.gov/malaria/about/biology/index.html"> life cycle</a> occurs in the insect, and it undergoes critical developmental processes as it travels from the mosquitoes gut to its salivary glands. But Mosquitoes don&#39;t only play host to Plasmodium, and like us, they harbor many friendly strains of bacteria that can play a role in mosquito immunity against the malaria parasite. It turns out that at least one of the denizens of the mosquito gut can help keep the parasite at bay.</p>
+<p><a href="http://www.sciencemag.org/content/332/6031/855.abstract">Natural Microbe-Mediated Refractoriness to Plasmodium Infection in Anopheles gambiae</a></p>
+<p>It&#39;s a title only a scientist could love, but the translation is fairly simple: bacteria can prevent malaria from infecting mosquitos.</p>
+<p>Other groups had previously shown that the gut bacteria in mosquitoes could affect the parasites, but no one had shown how. First, these guys isolated wild populations of mosquito gut bacteria and discovered that one particular strain of Enterobacter &#40;they call Esp_Z&#41; almost completely prevented malaria growth inside the insect.</p>
+<p>The graph on the left shows how many live parasites could be isolated from the guts of mosquitoes fed with different strains of bacteria &#40;or left alone - that&#39;s the PBS column&#41;. On the right you see what they pulled from the salivary glands, which is the most important from an infection perspective &#40;since that&#39;s the point of transmission&#41;. The dots all represent individual mosquitoes, and it&#39;s pretty clear: Esp<em>Z seems to kill off all of the parasite. As I mentioned before, this is in keeping with a lot of previous research. But now they have a specific strain, and they can start trying to uncover the mechanism - the &quot;how&quot; behind this phenomenon.  The first thought the researchers had was that maybe Esp</em>Z was boosting the mosquitoes&#39; own immune response. We know that insects have an immune system, and we know that it is important for a mosquito&#39;s response to malaria. This immune system does respond to bugs in the gut, so maybe this bacterial strain is just triggering the immune system to make a hostile environment that killed plasmodium as collateral damage. But when they knocked out the mosquito&#39;s own immune system, Esp_Z was still able to completely block growth of the parasite.</p>
+<p>Next, they turned their attention to reactive oxygen species &#40;ROS&#41;. A couple of weeks ago, <a href="http://scienceblogs.com/webeasties/2011/05/lemons_from_lemonade.php">I wrote about</a> how our own cells use the killing power of ROS, but it turns out that some bacteria may use the same strategy. The researchers noticed that the flasks containing the parasite-killing bacteria had much higher levels of ROS than the benign strains. They also saw that just using the culture medium alone from these bacteria was almost as effective at killing Plasmodium as cultures that actually contained Esp_Z. If they neutralized the ROS with vitamin C, however, the killing effect completely vanished.</p>
+<p>Unfortunately, it&#39;s probably impractical to go around trying to feed every mosquito in Africa this strain of bacteria, but this research hints at new potential ways of combating this epidemic. And considering shooting mosquitoes out of the sky with lasers is considered a viable option, I&#39;d say we need all the help we can get.</p>
+<p>–</p>
+<p>*I say rare because out of 2-300 million cases/year, there are &quot;only&quot; about 1 million deaths &#40;mostly children&#41;. That&#39;s still unacceptably high.</p>
+<p>**<a href="http://www.cdc.gov/malaria/malaria_worldwide/reduction/itn.html">This video</a> also has a great explanation of the problem of malaria, and some of the ways people are already trying to combat it.</p>
+<p>Cirimotich, C., Dong, Y., Clayton, A., Sandiford, S., Souza-Neto, J., Mulenga, M., &amp; Dimopoulos, G. &#40;2011&#41;. Natural Microbe-Mediated Refractoriness to Plasmodium Infection in Anopheles gambiae Science, 332 &#40;6031&#41;, 855-858 DOI: <a href="review">10.1126/science.1201618</a></p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

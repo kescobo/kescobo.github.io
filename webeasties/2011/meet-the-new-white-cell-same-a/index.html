@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Meet the new white cell, same as the old white cell</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Meet the new white cell, same as the old white cell</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>The field of immunology has a few quirks. I&#39;m sure this is no different than other fields of study, but one of the most puzzling &#40;and sometimes infuriating&#41; of these quirks is an obsession with categorizing different types of cells. Case in point, a recent paper in Nature Immunology:</p>
+<p><a href="http://www.nature.com/ni/journal/v12/n7/full/ni.2051.html">A semi-invariant VÎ±10&#43; T cell antigen receptor defines a population of natural killer T cells with distinct glycolipid antigen-recognition properties</a></p>
+<p>But before I get into that, allow me to provide some back-story.</p>
+<p>Identifying Cells</p>
+<p>First, I should be clear, immunology isn&#39;t alone in trying to delineate different cell types. In order to figure out how a cell or an organism works, you have to figure out how to distinguish that cell or organism from all the others. When microscopes came along, the first things people noticed were that not all cells have the same shape. For instance, microbiologists divided bacteria into bacilli, cocci and spirochetes.</p>
+<p>&#40;<a href="http://www.gchd.org/NFSEM/a2z-b.html"><a href="http://www.bio.davidson.edu/courses/genomics/method/FACS.html"><a href="http://en.wikipedia.org/wiki/Cluster_of_differentiation">Source</a></a></a>&#41;</p>
+<p>Early microscopists also pioneered the use of various stains and dyes, such as the <a href="http://www.gchd.org/NFSEM/a2z-b.html">Gram stain</a> which is still used to classify bacteria into two major groups - Gram positive and gram negative. Early characterization of the cells in blood was no different. Red blood cells &#40;which carry oxygen&#41; and white blood cells &#40;which includes everything else&#41;. Eosinophils stain positive for eosin, basophils are positive for various basic dyes. Monocytes have one nucleus, while polymorphonuclear cells seem to have many, oddly shpaed nuclei. The point of all of these characterizations is that cells with similar shape and similar properties often share the same function, and isolating the cell allows you to isolate the function.  But through the 1950&#39;s and 60&#39;s, this was still no easy feat. Many of the stains used in microscopy kill cells, which is fine if you want to look at whether or not a piece of tumor you cut out is cancerous &#40;cancer cells often look different from normal cells&#41;, or if you want to look at the pathology of a tissue during an autopsy. But scientists remained severely hampered in their efforts to extract, isolate and identify living cells in order to study them. Then, in the late 1960&#39;s, German scientists developed a technology that would revolutionize the study of cells: <a href="http://en.wikipedia.org/wiki/Flow_cytometry">Flow cytometry</a>.  Flow Cytometry</p>
+<p>The technology is complicated, but the principal is fairly straightforward:</p>
+<ol>
+<li><p>Send a mixed group of cells through a tube one at a time.</p>
+</li>
+<li><p>Use a method of rapid analysis that allows identification of cells of interest</p>
+</li>
+<li><p>Plot positive events on a graph</p>
+</li>
+</ol>
+<p>or</p>
+<ol start="4">
+<li><p>Send positive cells into a different tube than negative cells</p>
+</li>
+</ol>
+<p>&#40;Source&#41;</p>
+<p>Even using the earliest and crudest examples of this technology allowed rapid characterization of hundreds of thousands of cells at a time. Immunologists adopted this technology rapidly and effectively, due largely to two factors. First, many cells of the immune system are readily isolated from blood and are usually on their own - not bound up in large mats of other cells and connective tissue. The second reason has to do with step 2 above - immunologists had antibodies.</p>
+<p><a href="http://en.wikipedia.org/wiki/Antibody">Antibodies</a></p>
+<p>Microscopy stains served &#40;and continue to serve&#41; biologists well, but their application is limited. A lot of the early work on staining was haphazard and descriptive - find a new stain and see if it&#39;s useful. And as I mentioned, the staining procedure often kills cells. Antibodies, by contrast, can be raised against just about any molecule, and can be extremely specific. These days, just about every biology lab in the world makes use of antibodies as tools, but in the early days, it was the immunologists that held the key to this magic technique.</p>
+<p>Antibodies that specifically recognized proteins on the surface of cells were churned out by the hundreds, and by attaching these antibodies to fluorescent molecules, flow cytometrists could separate cells into ever-smaller subgroups. Because of their usefulness in identifying different subgroups, these surface proteins were given systematic names, called &quot;clusters of differentiation&quot; or CD.</p>
+<p>&#40;Source&#41;</p>
+<p>Bone marrow and blood were no longer a mass of indistinguishable, round, mononuclear cells. Scientists could now identify stem cells from cells committed to a specific lineage. Every lineage could be sub-divided into more and more specialized groups. More importantly, these different cell-surface molecules often described something about that cell&#39;s function. CD3 was discovered early on to be a marker of T-cells, and it turns out that CD3 is an integral component of the T-cell receptor, the sine qua non of T-cells. Some T-cells express CD4, and others express CD8 - but the difference is not random. CD4&#43; and CD8&#43; cells have very different functions.</p>
+<p>But this early and justifiable exuberance for categorization has led to some to some absurd excesses. By way of example, consider the <a href="http://en.wikipedia.org/wiki/Dendritic_cell">dendritic cell</a>. First described by Paul Langerhans in the late 19th century, these &quot;DC&#39;s&quot; were so named because of characteristic dendrites &#40;from the greek for &quot;tree&quot;, which give these cells a star-like shape. Later, immunologists learned that DC&#39;s bridge the innate and adaptive immune system by <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_1.php">traveling from the site of infection to lymph nodes</a>, where they present bits of infectious agents to T-cells. Early flow cytometrists also managed to find that these cells expressed high levels of the protein CD11c, and for a long time, &quot;dendritic cell&quot; and &quot;CD11c positive cell&quot; were synonymous.  Then, about 10 years ago, a new group cells were discovered. They don&#39;t look or behave anything like normal dendritic cells, they don&#39;t present antigens to T-cells, and they don&#39;t even have dendrites, but nonetheless they were called &quot;plasmacytoid dendritic cells&quot; &#40;or pDC&#41; because they express high levels of CD11c. Maybe my dismissal of this naming strikes you as pedantic, and perhaps it is, but <a href="http://scienceblogs.com/webeasties/2010/11/on_definitions_they_matter.php">definitions matter</a>. People have wasted untold research dollars, experimental hours and gallons of ink trying to relate these two cell types. But I don&#39;t think they&#39;re anymore related than a DC and a macrophage.</p>
+<p>OMG&#33; We found a new cell&#33;</p>
+<p>The DC/pDC divide is one example of the sort of category-obsessed hole immunologists can fall into, but at least pDC&#39;s are a legitimately new and uncharacterized type of cell. The cell mentioned in the paper up top? Not so much. Not that you would know it from the <a href="http://www.sciencedaily.com/releases/2011/06/110614101244.htm">press release.</a></p>
+<p>New Cell Type Offers Immunology Hope</p>
+<p>The discovery, published in the journal Nature Immunology, is a fundamental advance in understanding the different components of the immune system and how this system casts a net wide enough to catch all kinds of different infectious organisms.</p>
+<p>The paper describes an NKT cell. We&#39;ve known about NKT cells for over 15 years. Normal T-cells recognize fragments of proteins that are presented on the surface of cells on specialized platforms called the MHC &#40;if you read ERV, think of the <a href="http://scienceblogs.com/erv/2009/05/hiv-1_ctl_vaccine_oh_shi-.php">pirate-flag</a> metaphor&#41;. NKT cells have a T-cell receptor just like their brothers, but instead of seeing bits of protein on MHC, they see bits of lipid presented on CD1. In addition, while normal T-cells have hundreds of thousands of different possible receptors, NKT cells were only known to have a very limited set of receptors. Uldrich et al merely showed that there are NKT cells that have previously unknown T-cell receptors.</p>
+<p>This is an important step for NKT cell biology, even if only to remind the folks studying these cells that they should expand their search beyond the tiny population that they currently study. But it&#39;s hardly a paradigm shift, and this is NOT a &quot;new&quot; cell.  Uldrich, A., Patel, O., Cameron, G., Pellicci, D., Day, E., Sullivan, L., Kyparissoudis, K., Kjer-Nielsen, L., Vivian, J., Cao, B., Brooks, A., Williams, S., Illarionov, P., Besra, G., Turner, S., Porcelli, S., McCluskey, J., Smyth, M., Rossjohn, J., &amp; Godfrey, D. &#40;2011&#41;. A semi-invariant VÎ±10&#43; T cell antigen receptor defines a population of natural killer T cells with distinct glycolipid antigen-recognition properties Nature Immunology, 12 &#40;7&#41;, 616-623 DOI: <a href="review">10.1038/ni.2051</a></p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

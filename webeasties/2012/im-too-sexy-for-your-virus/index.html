@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>I'm Too Sexy for Your... Virus? Or, Immunity as it Relates to Peacocks</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>I'm Too Sexy for Your... Virus? Or, Immunity as it Relates to Peacocks</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>I know something&#39;s amiss when my google news alert returns headlines like these:</p>
+<p><a href="http://www.dailymail.co.uk/sciencetech/article-2105507/Why-women-lust-Brad-Pitt-just-fancy-immune-system.html?ito&#61;feeds-newsxml">Why women who lust after Brad Pitt may just fancy his immune system</a></p>
+<p><a href="http://jezebel.com/5887562/its-his-immune-system-that-you-actually-want-to-sleep-with">It&#39;s His Immune System That You Actually Want to Sleep With</a></p>
+<p><a href="http://theweek.com/article/index/224843/the-key-to-male-sexiness-a-powerful-immune-system">The key to male <a href="/tag/sex">sex</a>iness: A powerful immune system?</a></p>
+<p>and my personal favorite</p>
+<p><a href="http://www.livescience.com/18568-immune-system-male-attractiveness.html">Antibodies, Not Hard Bodies: The Real Reason Women Drool Over Brad Pitt</a></p>
+<p>These snazy headlines are all pointing to a recent paper in <a href="http://www.nature.com/ncomms/journal/v3/n2/full/ncomms1696.html">Nature Communications</a>. The paper&#39;s methodology is pretty simple: They took 74 Latvian men and immunized them against Hepatitis B. Later, they measured the participants&#39; blood for levels of HepB antibody, as well as levels of testosterone. Finally, they showed photographs of each of the participants to a panel of ladies, asking them to rate the subjects&#39; attractiveness. As far as I can tell, Brad Pitt was not involved in this study.  After some analysis they determine a few things -</p>
+<p>a&#41; Men with higher levels of testosterone have statistically higher levels of anti-HepB antibodies after vaccination.</p>
+<p>b&#41; Men that were rated as more attractive by the female judges had statistically higher levels of testosterone.</p>
+<p>c&#41; Men that were rated more attractive had statistically higher levels of anti-HepB antibodies.</p>
+<p>This is reported in all the stories above as &quot;Higher testosterone makes your immune system better&#33; Higher testosterone is sexy&#33; Women are attracted to a better immune system&#33;&quot; As you might suspect, it&#39;s a good deal more complicated than that.  How is immunity like a peacock&#39;s tail?</p>
+<p>The most interesting thing about this study &#40;in my humble opinion&#41; is precisely what all those news reports didn&#39;t talk about. The whole reason the authors cite for doing this study has to do something called the &quot;immunocompetance handicap hypothesis.&quot; The idea goes like this: individuals can provide visual proof of fitness &#40;ability to make strong babies&#41;, by ostentatiously displaying something that puts them at a competitive disadvantage. For instance, a male peacock with a huge, colorful tail should have a much harder time hiding from and escaping from predators. If a peacock with such a tail manages to survive despite such a handicap, he must be super fit in other ways, and that fitness is irresistible to peahens.</p>
+<p>The immunocompetence handicap hypothesis posits that testosterone works like the peacock&#39;s tail. In addition to regulating secondary sex characteristics &#40;broad shoulders, big muscles... you know, sexy things&#41;, testosterone is also thought to suppress the immune system. So if a testosterone-filled manly man isn&#39;t riddled with illness, he must be super fit in other ways, and that chiseled jaw is just a visual cue to his internal perfection. The reasoning <a href="http://blogs.scientificamerican.com/network-central/2012/02/27/open-laboratory-2013-submissions-form-is-now-open/">here</a> may seem backwards, but it&#39;s on solid theoretical footing.</p>
+<p>The trouble is, it doesn&#39;t seem like this hypothesis is supported by the data. In this study, men with higher testosterone had stronger immune responses to the vaccine, but I just got through telling you that testosterone is supposed to be a handicap. There&#39;s one final wrinkle that I haven&#39;t mentioned yet - the stress hormone cortisol. That cortisol suppresses the immune system is well known, and several studies have shown that artificial elevation of testosterone leads to higher levels of cortisol. It seems that the belief that testosterone suppressed the immune system may have been based on an artifact &#40;an effect of the experimental design rather than a true biological phenomenon&#41;. In fact, in this new study, the men with the lowest levels of cortisol showed the strongest correlation between antibody response to the vaccine and high testosterone levels.</p>
+<p>The authors say that their data shows &quot;support for the stress-linked immunocompetence handicap model of sexual selection,&quot; but it seems like they&#39;re trying too hard to shoehorn their data into the handicap framework. If high testosterone is related to better immune response, and high testosterone is attractive, you don&#39;t need a handicap model at all. To the extent that there is any causal link between attractiveness and immune response &#40;and I don&#39;t think the data is that great - see below&#41;, it seems that attractiveness is a visual cue of a good immune system, not of some handicap.</p>
+<p>I&#39;ve read the discussion section of this paper a number of times, and I still don&#39;t really understand exactly what they&#39;re trying to say. Maybe I&#39;m missing something, but while the title of the paper is &quot;Evidence for the stress-linked immunocompetence handicap hypothesis in humans,&quot; it seems like the simplistic headlines more accurately describe the data. Carl Zimmer <a href="http://blogs.discovermagazine.com/loom/2009/11/30/the-index-of-banned-words-the-continually-updated-edition/">hates it</a> when people write &quot;more research is needed&quot; &#40;because when is more research not needed?&#41;, but in this case I think it&#39;s valid. There is some &#40;vaguely&#41; suggestive data, and some &#40;maybe&#41; interesting correlations, but nothing like a complete story. I think more research is needed, if only to clarify the point and actually address what the role of this hormone in immune function actually is.</p>
+<p>And I still don&#39;t know how strong Brad Pitt&#39;s immune system is :-&#40;</p>
+<hr />
+<p>If you liked this piece, consider <a href="https://openlab.wufoo.com/forms/submission-form/">submitting it</a> to Open Laboratory 2013 &#40;you can read about Open Lab here&#41;. If you didn&#39;t like it, let me know why in the comments.</p>
+<hr />
+<p>The Data</p>
+<p>Because this paper has only one figure and it&#39;s pretty self-explanatory, I thought I would show you the data for So you can judge it for yourself. I put it here at the end because I&#39;m not sure how much people care about primary data, but I&#39;d like to include it for those of you that do.  Facial attractiveness is plotted on the vertical axis against a measure of anti-HepB antibodies on the horizontal axis.</p>
+<p>I&#39;ll be honest, I photoshopped out the trend line that was included in the original graph, but seriously, would you conclude from this data that immune response is correlated with attractiveness? There are plenty of unattractive people that showed a great immune response &#40;lower right&#41; and people rated as attractive with low immune response &#40;upper left&#41;. It&#39;s a bit interesting that the two people with the best immune response were also rated the most attractive &#40;upper right&#41;, and all of the people that showed no response to the vaccine were rated unattractive &#40;those are the dots hugging the vertical axis on the left&#41;, but even when you see the graph with the trend line, the link doesn&#39;t seem that strong &#40;a perfectly horizontal line would indicate no correlation, the steeper the slope, the higher the correlation&#41;.</p>
+<p>Maybe you&#39;re not used to looking at this sort of data, but I think it&#39;s especially unconvincing when you compare it to the correlation between testosterone and antibody response:</p>
+<p>In my opinion, the best you can conclude from this is that there&#39;s something that should be followed up on. There&#39;s certainly no causal link, and the correlation isn&#39;t even particularly strong.</p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

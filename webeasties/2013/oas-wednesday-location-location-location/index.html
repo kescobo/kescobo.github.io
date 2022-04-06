@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>OAS Wednesday - Location, location, location</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>OAS Wednesday - Location, location, location</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>For this week&#39;s OAS Wednesday, I thought I&#39;d try to highlight some research that&#39;s in my field. As a result, I will likely be more prone than usual to lapsing into jargon and assuming knowledge that I shouldn&#39;t &#40;or maybe I&#39;ll over-correct and get too simplified&#41;. Please let me know if anything needs clarification.</p>
+<p>In real estate, they say that the three most important things to consider are location, location and location. The same could probably be said about many aspects of biology, including the immune system - if you get a cut on your toe, you don&#39;t want inflammation in your kidney. I&#39;ve written before about the way that the cells of the immune system manage to navigate the body and <a href="http://scienceblogs.com/webeasties/2012/05/25/how-the-immune-system-get-where-it-needs-to-go/">arrive at the right location</a>, but today we&#39;re getting smaller: how is it that proteins get where they need to go within an individual cell?</p>
+<p>When talking about cells, we usually imagine a sac of fluid surrounded by a membrane. Maybe we imagine a separate sac on the inside that contains the DNA &#40;the nucleus&#41;, but generally speaking, everything between the outer membrane and the nucleus is thought of as one homogenous mass - the cytoplasm.</p>
+<p>In reality, the organization within cells is as vast and complicated as the organization of cells in the body, and many essential cell processes are entirely dependent on being in the right location at the right time. If you cast your memory back to high school biology, you may remember the term &quot;organelle&quot; &#40;literally &quot;little organ&quot;&#41;, which refers to specific compartments within cells that each have different functions. Each of these organelles require a distinct set of proteins, and there&#39;s an elaborate set of processes that manage to direct these proteins to the right place.</p>
+<p><a href="http://elife.elifesciences.org/content/2/e00291">Unc93B1 mediates differential trafficking of endosomal <a href="/tag/tlr">TLR</a>s</a>   Toll-like receptors or TLRs, are proteins that our immune cells use to detect the presence of potentially infectious microbes. It&#39;s been known for several years that these TLR&#39;s are found in different locations in cells - either on the surface &#40;plasma membrane&#41;, or inside compartments called &quot;endosomes,&quot; which form when a cell engulfs a foreign particle or microbe &#40;Cartoon 1&#41;.</p>
+<p>It&#39;s been known for some time that another protein, called Unc93B, is required for those TLRs in endosomes to function. Unc93B is best thought of as a chaperone - it doesn&#39;t actively participate in signaling, but it gets the receptors to the right location. Since proper location is essential to the function of these receptors, removing Unc93B blocks the function of all of the endosomal TLRs. But this paper reveals that this chaperone&#39;s role in directing TLR <a href="/tag/localization">localization</a> is more extensive than previously thought.</p>
+<p>All* proteins that end up in vesicles &#40;like endosomes&#41;, on the cell surface, or secreted from the cells pass through a similar series of steps called &quot;the <a href="http://www.ncbi.nlm.nih.gov/books/NBK21471/">secretory pathway</a>.&quot; These proteins are translated &#40;made&#41; in the cytoplasm along with every other protein, but contain a signal that causes them to be threaded through a protein channel into the interior of the endoplasmic reticulum &#40;ER&#41;. Once in the ER, they can be sent along in vesicles that bud from the ER and enter the Golgi apparatus, where they are further modified and sent off to their final destination &#40;check out the <a href="http://www.ncbi.nlm.nih.gov/books/NBK21471/figure/A4740/?report&#61;objectonly">video here</a>... I can&#39;t figure out how to embed it&#41;.</p>
+<p>If you think of a cell like a supply chain, the ER is the factory where products are assembled, but then they&#39;re sent off in trucks to a sorting facility, where the products receive their final packaging and are sent to their destinations. In this analogy, Unc93B is like a tracking bar code for TLRs, it stays with the package and makes sure it gets to the right place.  For the endosomal TLRs, the &quot;right place&quot; is a compartment that merges with the endosomes formed when the cell pulls in some foreign particle - in this way, they are present in the best location to detect a possible threat. Actually, there are multiple different types of endosomes, and this paper by Lee et al demonstrates that Unc93B is responsible for sorting different TLRs into different endosomal compartments.</p>
+<p>The paper is pretty heavy on the biochemistry, and I don&#39;t want to get too deep into the weeds looking at the actual data, but since this paper is open access, you should take a look and feel free to ask any questions that come up. I&#39;m not sure if anyone understands exactly what the functional difference between these endosomal compartments is, even though we can tell that they are different. If anyone knows different, let me know.</p>
+<p>*There are actually some exceptions to this rule, but talking about their trafficking would make things needlessly complicated</p>
+<hr />
+<p>&#91;OAS &#40;open access science&#41; wednesday is an attempt to highlight research published in Open Access Journals like <a href="http://www.plos.org/publications/journals/">PLoS</a>, <a href="www.elifesciences.org/">eLife </a>and <a href="https://peerj.com/">PeerJ</a>. <a href="http://scienceblogs.com/webeasties/2012/02/21/the-future-of-science-pub/">Here are</a> some<a href="http://scienceblogs.com/webeasties/2013/02/12/peerj-the-science-journal-we-need-and-deserve/"> reasons</a> why I think OAS is important. Also check out the <a href="http://opensciencefederation.com/about/">Open Science Federation</a>&#93;</p>
+<p>All figures in this post were created by me and licensed under a <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">Creative Commons Attribution-ShareAlike 3.0 Unported License</a>.</p>
+<p>*There are actually some exceptions to this rule, but talking about their trafficking would make things needlessly complicated</p>
+<p>Lee BL, Moon JE, Shu JH, Yuan L, Newman ZR, Schekman R, &amp; Barton GM &#40;2013&#41;. UNC93B1 mediates differential trafficking of endosomal TLRs. eLife, 2 PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/23426999">23426999</a></p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

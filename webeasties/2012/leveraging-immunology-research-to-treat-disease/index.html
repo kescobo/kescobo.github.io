@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Leveraging Immunology Research to Treat Disease</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Leveraging Immunology Research to Treat Disease</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>The vast majority of funding for biological research in the US comes from the National Institutes of Health &#40;NIH&#41;, and as a result, most of our grants are written in a way that plays up the clinical importance of our work. Some variant of the phrase,</p>
+<p>This research has implications in the treatment/prevention of &#91;insert disease here&#93;...</p>
+<p>appears in just about every grant and research paper in my field. In truth, it&#39;s often very difficult to draw a direct line between a specific research project and a drug that your doctor can prescribe. We like to pretend that we can leverage research to develop drugs in a rational way, but honestly, a lot of treatments are discovered by accident, and then we go back and try to figure out why they work.</p>
+<p>My favorite exception to this principal is the drug <a href="http://en.wikipedia.org/wiki/Natalizumab">Natalizumab</a> &#40;trade name Tysabri&#41;, which was designed to treat the autoimmune disease multiple sclerosis and turned out to be remarkably effective. Before I explain how the drug works, some background:</p>
+<p><a href="http://www.ncbi.nlm.nih.gov/pubmedhealth/PMH0001747/">Multiple sclerosis</a> &#40;MS&#41; is an autoimmune disorder in which a patient&#39;s immune system goes after the cells in their central nervous system - the spinal cord and brain. As with most autoimmune disorders, we&#39;re not really sure how it gets started, but once the immune system decides that it wants to attack something, the process is relentless. The symptoms vary widely depending on which areas of the brain are attacked - everything from loss of coordination and balance to paralysis, loss of vision/hearing and loss of speech - and the disease is typically progressive, meaning that symptoms build and compound over time as more and more of the brain is destroyed.</p>
+<p>In other words, it sucks. Hard.</p>
+<p>If caught early, there are a number of treatments that can slow the progression of the disease, but as with most autoimmune, disorders, most therapies are not specific. We know MS is caused largely by T-cells, and we know plenty about how T-cells work. There are drugs that will readily kill off your T-cells. Unfortunately, you need your T-cells to fight off the myriad of infectious organisms that you come into contact with every day, so treating MS with those drugs would likely lead to rapid death by virus. There&#39;s very little that we know about that distinguishes a T-cell that&#39;s attacking your brain from a T-cell that&#39;s attacking the flu</p>
+<p>As with other autoimmune diseases, we can use other drugs that suppress the immune system generally, but these can&#39;t be used to completely block the immune response - again, because you&#39;re immune system is important for other reasons - so this strategy can only slow down the inevitable &#40;and even at low doses, these drugs will make you more susceptible to infectious diseases&#41;.</p>
+<p>Hopefully, you now understand the nature of the problem. How can you block the immune response in MS without blocking all the other immune responses that your body needs? I mentioned that there isn&#39;t much that distinguishes the T-cells causing MS from all the other T-cells in your body, but there is at least one: MS-causing T-cells need to get to the brain. A couple of weeks ago, <a href="http://scienceblogs.com/webeasties/2012/05/25/how-the-immune-system-get-where-it-needs-to-go/">I wrote about</a> how the cells of the immune system navigate the body, using a set of molecules called selectins, chemokines and integrins as a sort of &quot;area code&quot; that determines where T-cells and other white blood cells go in order to do their job.</p>
+<p>Natalizumab, the drug I mentioned at the top, is a direct result of the research on cell migration. Instead of trying to destroy the T-cells directly, scientists realized that we could just screw up their targeting systems. Natalizumab blocks the α4 integrin, which T-cells need in order stop in the blood stream at a place where they can enter the brain.</p>
+<p>&lt;iframe width&#61;&quot;420&quot; height&#61;&quot;315&quot; src&#61;&quot;<a href="http://www.youtube.com/embed/yChFz3_td4A">http://www.youtube.com/embed/yChFz3_td4A</a>&quot; frameborder&#61;&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;</p>
+<p>They just roll on by, and since they&#39;re programed to attack things that are only found in the brain, these T-cells can keep on circulating throughout the body without causing problems. In addition, because α4 integrin is specific to the brain and the gut, this drug doesn&#39;t screw up all of your normal T-cells. If you have a virus infection in your lungs or a bacterial infection in your toe, the T-cells responding recognize different integrins, so they function just fine.</p>
+<p>Of course, there are some downsides to Natalizumab. It&#39;s a monoclonal antibody - a huge protein rather than a small molecule. Functionally, this means that you can&#39;t take it in pill form &#40;your stomach acid would bust it up&#41;, so patients need to go to a doctor every month and get an infusion. Not only is this a hassle, it also means that the treatment is quite expensive &#40;though on the bright side, autoimmunity isn&#39;t that big a problem<a href="http://en.wikipedia.org/wiki/Hygiene_hypothesis"> in the developing world</a>&#41; Also, there&#39;s a reason T-cells evolved a way to get into the brain in the first place: you can get infections in the brain, and need T-cells to help deal with them. Natalizumab has indeed been linked to some <a href="http://en.wikipedia.org/wiki/Progressive_multifocal_leukoencephalopathy">fatal viral infections</a> in the brain.</p>
+<p>Still, for people suffering from MS, or newly diagnosed, this treatment is an amazing advance - and it&#39;s a direct result of the understanding gained from basic research.  </p>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

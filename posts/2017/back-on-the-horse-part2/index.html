@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+<link rel=stylesheet href="/libs/highlight/atom-one-dark.css">
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Getting Back on the Horse - Part 2: Deploying a new Site</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Getting Back on the Horse - Part 2: Deploying a new Site</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p>Yeah, so my <a href="http://nequals.me/blog/2017/08/getting-back-on-the-horse/">last post</a> was clearly a bit too optomistic. I&#39;ve only just now set up this new website using the <a href="https://gohugo.io/">Hugo</a> static site generator and <a href="https://github.com/gcushen/hugo-academic/">Academic</a> theme which is pretty nifty. I started doing this back in August, but ran into some snag and haven&#39;t returned to it until now.</p>
+<p>But I thought I&#39;d briefly go through what I did in order to set this up, mostly as a reference for myself.</p>
+<h2 id="motivation"><a href="#motivation" class="header-anchor">Motivation</a></h2>
+<p>There are just a few things I really want for my website:</p>
+<ol>
+<li><p>Ability to edit pages and add content using markdown</p>
+</li>
+<li><p>Good syntax highlighting</p>
+</li>
+<li><p>Ability to use git for version control</p>
+</li>
+</ol>
+<p>There are a lot of things that sort of work for this. <a href="https://jekyllrb.com/">Jekyll</a> seems to be the most common, and I&#39;ve tried it before, but it seemed a bit too sparse. And I didn&#39;t love the way it looked, or the structure of the folder structure to make it work. Then I tried <a href="https://getgrav.org/">Grav</a> and one of its git-enabled <a href="https://github.com/hibbitts-design/grav-skeleton-eportfolio-blog">themes</a>, but it seemed too complicated for my needs.</p>
+<p>My <a href="http://kevinbonham.com">main website</a> is currently through Squarespace, and it looks pretty, but I can&#39;t easily manage posts in text files with version control. In principle, I could write posts in markdown and upload those files, but that&#39;s clunky, and anyway and it&#39;s syntax highlighting isn&#39;t quite up to snuff &#40;or wasn&#39;t last I checked&#41;.</p>
+<p>So, enter Hugo.</p>
+<h2 id="set-up"><a href="#set-up" class="header-anchor">Set-up</a></h2>
+<p>Honestly, this is dead simple. I followed the <a href="https://gohugo.io/getting-started/quick-start/">Getting Started</a> page in the Hugo docs, and <a href="https://sourcethemes.com/academic/post/getting-started/">the same</a> for the Academic theme. Only a couple of modifications:</p>
+<p>First, when installing the theme, I used a git submodule rather than just straight cloning. In other words, after installing hugo with homebrew:</p>
+<pre><code class="language-sh">&#36; mkdir hugo-nequalsme
+&#36; cd hugo-nequalsme
+&#36; git init
+Initialized empty Git repository in /Users/kev/computation/websites/hugo-nequalsme/.git/
+&#36; git submodule add https://github.com/gcushen/hugo-academic.git themes/academic
+Cloning into &#39;/Users/kev/computation/websites/hugo-nequalsme/themes/academic&#39;...
+remote: Counting objects: 2334, done.
+remote: Compressing objects: 100&#37; &#40;57/57&#41;, done.
+remote: Total 2334 &#40;delta 28&#41;, reused 34 &#40;delta 11&#41;, pack-reused 2263
+Receiving objects: 100&#37; &#40;2334/2334&#41;, 3.43 MiB | 3.48 MiB/s, done.
+Resolving deltas: 100&#37; &#40;1340/1340&#41;, done.
+&#36; cp -a themes/academic/exampleSite/* .</code></pre>
+<p>Dealing with submodules is a <a href="https://www.atlassian.com/blog/git/git-submodules-workflows-tips">bit tricky</a>, but for the most part I won&#39;t be needing to actively worry about it.</p>
+<p>Then I created a <a href="https://github.com/kescobo/nequals.me">new repo</a> on github, added all of the demo content, and pushed it.</p>
+<pre><code class="language-sh">&#36; git remote add origin git@github.com:kescobo/nequals.me.git
+&#36; git push -u origin master</code></pre>
+<h2 id="customizing"><a href="#customizing" class="header-anchor">Customizing</a></h2>
+<p>Again, I basically just followed the <a href="https://sourcethemes.com/academic/post/widgets/">theme docs</a> to modify my <code>config.toml</code> and all of the content pages. I had some posts left over from previous static site attempts and moved them over to the <code>content/post/</code> folder.</p>
+<p>This is mostly straightforward, and I tried to do atomized commits to the repo so it should be clear from the history. Part of the customization was commenting out or disabling all of the stuff I don&#39;t want for now. Happily - the content is still there if I ever want it later.</p>
+<h2 id="deploying"><a href="#deploying" class="header-anchor">Deploying</a></h2>
+<p>Unfortunately, I can&#39;t go through this in detail, because I got a big chunk of it set up a while ago. The good news is, the folks at <a href="https://reclaimhosting.com/">Reclaim Hosting</a> are awesome. I&#39;ve filed a bunch of help tickets when I was trying to get Grav working, and they were prompt and super helpful.</p>
+<p>So the background here is that I already have a domain registered through <a href="http://hover.com">hover</a>, and I&#39;ve got them pointing at my hosting at Reclaim. Honestly, this part gave me some trouble when I initially did it, because I had tweaked all kinds of stuff before, but if you&#39;re starting from scratch the docs are pretty good.</p>
+<p>What I did today was to effectively clear out the <code>public_html/</code> folder on the server that had all of the crap from the previous Grav blog, and then I just needed to build my Hugo site locally and transfer it up to the server. Building the site is easy -  you just:</p>
+<pre><code class="language-sh">&#36; hugo
+Started building sites ...
+
+Built site for language en:
+0 draft content
+0 future content
+0 expired content
+26 regular pages created
+29 other pages created
+0 non-page files copied
+20 paginator pages created
+18 tags created
+0 categories created
+1 publication_types created
+total in 64 ms</code></pre>
+<p>This generates the entire html structure in a new folder <code>public/</code>. To transfer it, I&#39;m using <code>rsync</code>.</p>
+<pre><code class="language-sh">&#36; rsync -avzP --delete public/ &lt;username&gt;@nequals.me:/home/&lt;username&gt;/public_html/</code></pre>
+<p>The flags for <code>rsync</code> are:</p>
+<ul>
+<li><p><code>-a</code>: archive mode &#40;does a bunch of worthwhile stuff <a href="https://serverfault.com/questions/141773/what-is-archive-mode-in-rsync">see here</a>&#41;</p>
+</li>
+<li><p><code>-v</code>: verbose</p>
+</li>
+<li><p><code>-z</code>: compresses stuff before transferring and decompresses on the other side &#40;reduces bandwidth needed&#41;</p>
+</li>
+<li><p><code>-P</code>: shows progress meters for large files</p>
+</li>
+<li><p><code>--delete</code>: removes stuff that&#39;s not in the source directory anymore</p>
+</li>
+</ul>
+<p>That last piece is useful if you&#39;re playing around with the folder structure, because files that aren&#39;t modified remain there, so you might end up with a lot of crap floating around your webpage otherwise.</p>
+<p>I also set up an alias in my <code>.bashrc</code> file to make this easier:</p>
+<pre><code class="language-sh">alias hugopush&#61;&quot;rm -rf public/; hugo; rsync -avzP --delete public/ &lt;username&gt;@nequals.me:/home/&lt;username&gt;/public_html/&quot;</code></pre>
+<p>And that&#39;s it&#33; At some point I&#39;ll want to look into how I can do webhooks or something so that I can just push to github and have the site building happen right on the server, but as it stands, this is pretty seemless. I write the markdown file, commit changes, and run <code>hugopush</code> and I&#39;m done&#33;</p>
+<p></p>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+     <script src="/libs/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+ 
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

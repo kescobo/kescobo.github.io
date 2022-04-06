@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Lemons from Lemonade: Recycling Reactive Oxygen Species</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Lemons from Lemonade: Recycling Reactive Oxygen Species</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>Way back in high school bio, I learned about the 2 main ways that eukaryotic organisms &#40;everything other than bacteria and archaea&#41; make their metabolic living: <a href="http://en.wikipedia.org/wiki/Photosynthesis">photosynthesis </a>and <a href="http://en.wikipedia.org/wiki/Oxidative_phosphorylation">oxidative phosphorylation</a> &#40;also known as respiration&#41;. These two processes are fundamentally related - photosynthesis combines CO2 and water to produce sugar and oxygen, while respiration breaks down sugars using oxygen, leaving water and CO2. But the cells of plants, animals and fungi can&#39;t do either of these things on their own. Sometime in our distant evolutionary past, we took on tiny passengers that do the work for us.  As <a href="http://scienceblogs.com/webeasties/2011/05/artificial_engineerable_animal.php">Heather wrote yesterday</a> about chloroplasts,</p>
+<p>Some photosynthetic bacteria eons ago found itself nestled inside another cell, realized it was a pretty sweet place to call home, and viola - a new cell organelle was born. OK fine, that is a bit of an oversimplification. The endosymbiotic theory is a bit more complicated, but that&#39;s the general idea.</p>
+<p>And it&#39;s the same general idea for mitochondria, which perform respiration. As you probably know, only plants have chloroplasts &#40;until the Harvard scientists Heather mentioned have their way&#41;, but ALL eukaryotes have mitochondria. <a href="http://en.wikipedia.org/wiki/Lactic_acid_fermentation#Glycolysis">It&#39;s possible</a> to get energy from sugar without oxygen, but it&#39;s not very efficient. Our mitochondria extract over 10 times as much energy from a single molecule of glucose than would be possible without them. But all that efficiency comes with a price - a byproduct of respiration is &quot;reactive oxygen species&quot; or ROS &#40;<a href="http://scientopia.org/blogs/scicurious/2011/05/06/friday-weird-science-i-hope-you-like-your-sperm-and-your-cell-phones-neat/">no, not ROUS</a>&#41;.</p>
+<p>Yet, as with so many things in evolution, a cell sees lemons and decides to make lemonade:</p>
+<p><a href="http://www.ncbi.nlm.nih.gov/pubmed?term&#61;21525932">TLR signalling augments macrophage bactericidal activity through mitochondrial ROS</a></p>
+<p>Reactive oxygen species are, as you might have guessed, reactive. They can cause all kinds of damage to proteins and lipds, and even DNA. Evidently, macrophages have learned to harness this destructive power to their advantage, by shuttling the ROS produced by mitochondria into the phagosomes that contain bacteria.</p>
+<p>For a long time, researchers have known that macrophages use ROS to cope with bacterial invaders. There are enzymes like inducible nitric oxide synthase &#40;iNOS&#41; and NADPH oxidase that intentionally make ROS to deal with bacteria. But A West et al have now shown that macrophages can divert the waste stream from mitochondria, recycling these destructive molecules for their bacteriacidal activity.</p>
+<p>First, they hit macrophages in cell cuture with a few related stimuli - some activate bacteria-sensing TLRs, some hit virus-sensing TLRs, and some are just general activators. They found that mitochondrial ROS &#40;mROS&#41; increased in response to bacteria-related signals, but not to the others. In the plots below, the doted lines represent the stimulated cells, while the solid lines show control cells. Lines further to the right indicate more mROS.</p>
+<p>They also showed that mitochonrial membranes associate with phagosomes containing latex beads coated with TLR ligands, but not the beads themselves. These images show macrophages stained with an antibody that makes a mitochondrial membrane protein fluoresce green. The beads are red, and the places that they localize together are in yellow in the bottom panels.</p>
+<p>They also did some biochemistry showing parts of the TLR signaling pathway interacting directly with mitochondria. But the most convincing experiment is in the last panel. Here, they use salmonella to infect mice that over-express an enzyme called catylase in their mitochondria &#40;MCAT&#41;. Catylase is one of the enzymes that normal cells use to protect themselves from rogue ROS - it helps convert them into harmless molecules, and these mice generally live longer and show less age-related oxidative damage. However, this decrease in mitochondrial ROS severly impaired the macrophages&#39; ability to deal with bacterial infection. After 5 days, these mice had over five times as many bacteria in their spleen than wild-type mice.</p>
+<p>I&#39;m not sure if there are any direct health implications of this work &#40;maybe antioxidants aren&#39;t all they&#39;re cracked up to be&#41;, but I think it&#39;s a cool example of evolution making the best out of a bad situation.</p>
+<p>West, A., Brodsky, I., Rahner, C., Woo, D., Erdjument-Bromage, H., Tempst, P., Walsh, M., Choi, Y., Shadel, G., &amp; Ghosh, S. &#40;2011&#41;. TLR signalling augments macrophage bactericidal activity through mitochondrial ROS Nature, 472 &#40;7344&#41;, 476-480 DOI: <a href="review">10.1038/nature09973</a></p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>The Trouble with Magic Bullets</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>The Trouble with Magic Bullets</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>Antibodies are often thought of as magic bullets, and as far as bullets go, they are about as magic as you can get. Antibodies are proteins that are manufactured by specialized &quot;B-cells,&quot; and their main feature is that they stick to things. At first glance, biochemical stickiness does not seem all that magical; there are innumerable examples of proteins that have evolved to interact with one another or with other types of molecules. But while natural selection can take millions of years to refine an interaction, your body can mount an immune response and generate antibodies against almost any molecule, even <a href="http://en.wikipedia.org/wiki/Aniline">synthetic molecules</a> that are never encountered in nature, even <a href="http://www.mayoclinic.com/health/nickel-allergy/DS00826">against individual atoms</a>, in about a week.</p>
+<p>The idea of an <a href="http://en.wikipedia.org/wiki/Antibody">&quot;AntikÃ¶rper,&quot;</a> was first proposed by Paul Erlich over 100 years ago, and since then our knowledge of the structure and function of antibodies has exploded. The first described function of antibodies was to destroy bacteria in a test tube, but we now know that they have a host of other functions. They can label the surface of bacteria, making them easier to spot and destroy by immune cells. They are transfered to a fetus across the placenta and to infants in breast milk to enhance their fledgling immune system. They can even physically neutralize viruses and toxins; both viruses and toxins generally need to latch on to specific proteins on the surface of your cells in order to get in and cause damage, and antibodies can stick to and block those latches, rendering them inert.</p>
+<p>Antibodies also make fantastic tools for researchers. These days, almost every biology lab in the world uses antibodies as in many different types of experiments, from <a href="http://scienceblogs.com/webeasties/2011/07/meet_the_new_white_cell_same_a.php">identifying different types of cells</a> to<a href="http://goo.gl/EGVNj"> looking at things</a> under a microscope. Because antibodies stick to things, and stick to things selectively, they are incredibly useful as biochemical markers/signposts that can help you identify, purify or locate just about any molecule anywhere in an organism.</p>
+<p>And increasingly, antibodies are being used in medical treatments. From <a href="http://scienceblogs.com/webeasties/2010/03/why_every_omg_weve_cured_cance.php">delivering bee venom</a> to tumor cells or <a href="http://en.wikipedia.org/wiki/Natalizumab">blocking our own immune cells</a> from entering the brain in multiple sclerosis patients, the ability to target particular molecules on purpose allows scientists to devise rational approaches to complex diseases, instead of just shooting in the dark with drug screens. But there&#39;s a problem with this approach, and that problem&#39;s name is serum sickness. In order to understand serum sickness though, you first need to know a little bit about antibody structure.</p>
+<p>Antibodies are Y-shaped proteins, and they have lateral symmetry &#40;if you split one down the middle, the two halves are identical&#41;.</p>
+<p>&#40;<a href="http://www.nwfsc.noaa.gov/hab/habs_toxins/marine_biotoxins/detection/elisa.html">Source</a>&#41;</p>
+<p>The business end is at the top of the &quot;Y&quot; - this is where it grabs onto whatever it&#39;s designed to grab onto &#40;its &quot;antigen&quot;&#41;, and as you can see from the picture, each individual antibody actually has two of these binding sites. In the normal functioning of antibodies, this is great news - it means each antibody can be twice as potent* - but when it comes to antibody therapies and serum sickness, this is where the problem starts.</p>
+<p>By way of example, take snake anti-venom. Also called &quot;antivenin,&quot; this incredibly effective snake-bite treatment was one of the earliest uses of antibody as medicine. <a href="http://www.popularmechanics.com/science/health/med-tech/how-to-make-antivenom-why-the-world-is-running-out#fbIndex1">To make antivenin</a>, poisonous snakes are milked to extract their venom, and this venom is injected into a horse or other large mammal, inducing an immune response and causing the horse to make potent antibodies that can bind and neutralize the toxin. If you get bitten by the same type of snake, you can receive an injection of horse antibody that will neutralize the toxin in time to save your life. Awesome&#33;</p>
+<p>The trouble is, your body sees those horse antibodies as foreign, and can mount an immune response against them, giving you antibodies against antibodies. Since each of your antibodies can stick to two horse antibodies, and each of those horse antibodies can bind to two venom molecules, and each venom molecule can potentially be bound by multiple horse antibodies, you can begin to form massive &quot;immune complexes.&quot; </p>
+<p>These complexes make your immune system freak-out causing fever and hives, and can even precipitate out of the blood and clog up kidneys &#40;nephritis&#41;, gum up joints &#40;arthritis&#41; and deposit in the skin or lungs causing local inflammation. This is serum sickness - not pretty.  Modern antibody therapeutics such as <a href="http://en.wikipedia.org/wiki/Rituximab">rituximab</a> use &quot;humanized&quot; antibodies in which the base of the Y has been swapped out with the human form of the protein. This significantly decreases the prevalence of serum sickness, but the problem <a href="http://www.jrheum.org/content/34/2/430.short">hasn&#39;t gone away</a>. Some antivenin makers have also <a href="https://secure.muhealth.org/~ed/students/articles/AnnEM_37_p0181.pdf">experimented</a> &#91;pdf&#93; with using enzymes to cut the arms of the antibody away from the base such that each molecule only has a single binding site, but this makes the molecules less stable in the blood and serum sickness can still occur &#40;though at lower frequency&#41;.  Despite these problems, it&#39;s clear that antibody therapies hold great promise, but they are not without their problems. Hopefully, understanding the science behind these less-than-magic bullets will enable new ideas to reduce the complications associated with them.</p>
+<hr />
+<p>*Actually, due to some physical-chemistry that is a bit too complicated to go into here, 2 binding sites can actually increase the strength of binding &#40;what we call the &quot;affinity&quot;&#41; by orders of magnitude.</p>
+<p>References:Nielsen H, SÃ¸rensen H, Faber V, &amp; Svehag SE &#40;1978&#41;. Circulating immune complexes, complement activation kinetics and serum sickness following treatment with heterologous anti-snake venom globulin. Scandinavian journal of immunology, 7 &#40;1&#41;, 25-33 PMID: <a href="review">635471</a></p>
+<p>Dart, R. &#40;2001&#41;. Efficacy, safety, and use of snake antivenoms in the United States Annals of Emergency <a href="/channel/medicine">Medicine</a>, 37 &#40;2&#41;, 181-188 DOI: <a href="review">10.1067/mem.2001.113372</a></p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+<link rel=stylesheet href="/libs/highlight/atom-one-dark.css">
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Matching Publications to PubMed IDs</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Matching Publications to PubMed IDs</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p>Earlier this week, I got an e-mail from Lucia Santamaria from the &quot;<a href="https://icsugendergapinscience.org/work-packages/publication-patterns/">Gender Gap in Science</a>&quot; project from the International Council for Science. They are trying to systematically measure the gender gap in a number of ways, including looking at publication records. One of the important parts of their effort is to find ways to validate methods of gender assignment or inference.</p>
+<p>Lucia was writing about some data found in <a href="https://doi.org/10.1371/journal.pcbi.1005134">the paper I wrote with with Melanie Stefan</a> about women in computational biology. In particular, she wanted the dataset that we got from Filardo et. al. that had a list of ~3000 journal articles with known first-author genders. This is a great dataset to have, since the authors of that paper did all the hard work of actually going one-by-one through papers and finding the author genders by hand &#40;often searching institutional websites and social media profiles for pictures etc&#41;.</p>
+<p>This allowed us to validate our gender inference based on author first name against a dataset where the truth is known &#40;it did pretty well&#41;.</p>
+<p><img src="/assets/img/gender_supp1c.png" alt="checking gender inference against known genders" /></p>
+<p>And that&#39;s what Lucia wants to do as well. There&#39;s just one problem: the form of the data from Filardo and colleagues is human-readable, but not machine- readable<sup id="fnref:95b33832"><a href="#fndef:95b33832" class="fnref">[1]</a></sup>. For example, one row of the data looks like this:</p>
+<p><table class="fndef" id="fndef:95b33832">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:95b33832">[1]</a></td>
+        <td class="fndef-content">The input datasets used in this post are available through the Open Science Framework: https://osf.io/hs6ut/</td>
+    </tr>
+</table>
+ | Article<em>ID | Full</em>Title | Link<em>to</em>Article | Journal | Year | Month | First Author Gender | |––––––|––––––|––––––––-|––––-|–––|–––-|––––––––––-| | Aaby et al. &#40;2010&#41; | Non-specific effects of standard measles vaccine at 4.5 and 9 months of age on childhood mortality: randomised controlled trial | NA | BMJ | 2010 | 12 - Dec | Male | | Aaron et al. &#40;2007&#41; | Tiotropium in Combination with Placebo Salmeterol or Fluticasone–Salmeterol for Treatment of Chronic Obstructive Pulmonary Disease: A Randomized Trial | http://annals.org/article.aspx?articleid&#61;734106 | Annals of Internal Medicine | 2007 | 04 - Apr | Male |</p>
+<p>What we&#39;d really like to have is some unique identifier &#40;eg the Pubmed ID or doi&#41; associated with each record. That would make it much easier to cross- reference with other datasets, including the table of hundreds of thousands of publications that we downloaded as part of this study. I had this when we published - it&#39;s how we validated our method, but I&#39;m embarrassed to say it didn&#39;t get included with the paper, and I recently had to delete my old computer backups which is the only place it lived.</p>
+<p>I told her how we initially did this, and it sounds like she managed to make it work herself, but I thought it would be worth documenting how I did it originally &#40;and maybe improve it slightly&#41;. So we&#39;ve got a table with titles, author last names, years, and journals, and what we want is a pubmed id or doi.</p>
+<p>I&#39;m using <a href="http://julialang.org">julia</a> as my go-to language these days, and the first step is to load in the table as a dataframe that we can manipulate:</p>
+<pre><code class="language-julia">using DataFrames
+using CSV
+
+df &#61; CSV.read&#40;&quot;data/known-gender.csv&quot;&#41;
+
+# get an array with the &quot;article id&quot; as a string
+ids &#61; Vector&#123;String&#125;&#40;df&#91;:Article_ID&#93;&#41;
+@show ids<a href="https://icsugendergapinscience.org/work-packages/publication-patterns/">1</a></code></pre>
+<pre><code class="language-julia">ids<a href="https://icsugendergapinscience.org/work-packages/publication-patterns/">1</a> &#61; &quot;Aaby et al. &#40;2010&#41;&quot;</code></pre>
+<p>We can see that the current form of the <code>:Article_ID</code> has both author name and the year, but we want to be able to handle these separately. But they all take the same form, the author name, sometimes followed by &quot;et al.&quot;, followed by the year in parentheses<sup id="fnref:c90d47d1"><a href="#fndef:c90d47d1" class="fnref">[2]</a></sup>. So I&#39;m going to use regular expressions, which can look like gobbledegook if you&#39;re not familiar with it. It&#39;s beyond the scope of this post to describe it, but I highly recomend <a href="https://regexr.com/">regexr</a> as a resource for learning and testing. The regex I used for this is composed of 3 parts:</p>
+<ul>
+<li><p>The author name, which can have some number of letters, spaces, <code>-</code>, and <code>&#39;</code>: <code>&#40;&#91;\w\s\-&#39;&#93;&#43;&#41;</code></p>
+<ul>
+<li><p>these are also at the beginning of the line, so I add a <code>^</code> &#40;just to be safe&#41;</p>
+</li>
+</ul>
+</li>
+<li><p>Then &quot;et al.&quot;: <code>et al\.</code></p>
+<ul>
+<li><p>the <code>.</code> is a special character, so it&#39;s escaped with <code>\</code></p>
+</li>
+<li><p>this is also optional, so I wrap it in parentheses and add <code>?</code></p>
+</li>
+</ul>
+</li>
+<li><p>The year, which is 4 digits, and wrapped in parentheses: <code>\&#40;&#40;\d&#123;4&#125;&#41;\&#41;</code></p>
+<ul>
+<li><p>the inner parentheses are so I can grab it as a group</p>
+</li>
+<li><p>it should be the end, so I finish with <code>&#36;</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<p>So, the &#91;complete regex&#93; And now I want to apply that search to everything in the <code>Article_ID</code> column:</p>
+<pre><code class="language-julia"># confirm this matches every row
+length&#40;ids&#41; # --&gt; 3204
+sum&#40;.&#33;ismatch.&#40;r&quot;^&#40;&#91;\w\s\-&#39;&#93;&#43;&#41;&#40; et al\.&#41;? \&#40;&#40;\d&#123;4&#125;&#41;\&#41;&#36;&quot;, ids&#41;&#41; # --&gt; 3204
+
+# apply match across the whole ids array with &#96;match.&#40;&#41;&#96;
+matches &#61; match.&#40;r&quot;^&#40;&#91;\w\s\-&#39;&#93;&#43;&#41;&#40; et al\.&#41;? \&#40;&#40;\d&#123;4&#125;&#41;\&#41;&#36;&quot;, ids&#41;
+# get the last name of first authors
+firstauthors &#61; &#91;m.captures&#91;1&#93; for m in matches&#93;
+# get the year... yeah there&#39;s a column for this, but since we have it...
+years &#61; &#91;parse&#40;Int, m.captures&#91;3&#93;&#41; for m in matches&#93;</code></pre>
+<pre><code class="language-julia">3204-element Array&#123;Int64,1&#125;:
+ 2010
+ 2007
+     ⋮
+ 2007
+ 2011</code></pre>
+<p>We also have a column for the journal names, but pubmed searching is a bit idiosyncratic and works better if you use the right abreviations. So next, I built a dictionary of abbreviations, and used an array comprehension to get a new array with the journal names:</p>
+<pre><code class="language-julia">journals &#61; Vector&#123;String&#125;&#40;df&#91;:Journal&#93;&#41;
+
+replacements &#61; Dict&#40;
+    &quot;Archives of Internal Medicine&quot; &#61;&gt; &quot;Arch Intern Med&quot;,
+    &quot;Annals of Internal Medicine&quot; &#61;&gt; &quot;Ann Intern Med&quot;,
+    &quot;The Lancet&quot; &#61;&gt; &quot;Lancet&quot;,
+    &quot;NEJM&quot; &#61;&gt; &quot;N Engl J Med&quot;
+    &#41;
+
+journals &#61; &#91;in&#40;x, keys&#40;replacements&#41;&#41; ? replacements&#91;x&#93; : x for x in journals&#93;</code></pre>
+<pre><code class="language-julia">3204-element Array&#123;String,1&#125;:
+ &quot;BMJ&quot;
+ &quot;Ann Intern Med&quot;
+ ⋮
+ &quot;Lancet&quot;
+ &quot;Ann Intern Med&quot;</code></pre>
+<p>Finally, words like &quot;and&quot;, &quot;in&quot;, &quot;over&quot; don&#39;t help a lot when searching, and the titles currently have special characters &#40;like <code>:</code> or <code>&#40;&#41;</code>&#41; that also don&#39;t help or could even hurt our ability to search. So I took the title column, and built new strings using only words that are 5 characters or more. I did this all in one go, but to explain, the <code>matchall&#40;&#41;</code> function finds all of the 5 or more letter words &#40;that&#39;s <code>\w&#123;5,&#125;</code> in regex&#41; and returns an array of matches. Then the <code>join&#40;&#41;</code> function puts them together in a single string &#40;separated by a space since I passed <code>&#39; &#39;</code> as an argument&#41;:</p>
+<pre><code class="language-julia">titles &#61; join.&#40;matchall.&#40;r&quot;\w&#123;5,&#125;&quot;, Vector&#123;String&#125;&#40;df&#91;:Full_Title&#93;&#41;&#41;, &#39; &#39;&#41;</code></pre>
+<pre><code class="language-julia">3204-element Array&#123;String,1&#125;:
+ &quot;specific effects standard measles vaccine months childhood mortality randomised controlled trial&quot;
+ &quot;Tiotropium Combination Placebo Salmeterol Fluticasone Salmeterol Treatment Chronic Obstructive Pulmonary Disease Randomized Trial&quot;
+ ⋮
+ &quot;Artemether lumefantrine versus amodiaquine sulfadoxine pyrimethamine uncomplicated falciparum malaria Burkina randomised inferiority trial&quot;
+ &quot;Patient Interest Sharing Personal Health Record Information Based Survey&quot;</code></pre>
+<p>So now we&#39;ve got all the elements of our search, and I just put them into an array of tuples to make them easier to deal with:</p>
+<pre><code class="language-julia">searches &#61; collect&#40;zip&#40;titles, firstauthors, journals, years&#41;&#41;</code></pre>
+<pre><code class="language-julia">3204-element Array&#123;Tuple&#123;String,SubString&#123;String&#125;,String,Int64,Int64&#125;,1&#125;:
+ &#40;&quot;specific effects standard measles vaccine months childhood mortality randomised controlled trial&quot;, &quot;Aaby&quot;, &quot;BMJ&quot;, 12, 2010&#41;
+ &#40;&quot;Tiotropium Combination Placebo Salmeterol Fluticasone Salmeterol Treatment Chronic Obstructive Pulmonary Disease Randomized Trial&quot;, &quot;Aaron&quot;, &quot;Ann Intern Med&quot;, 4, 2007&#41;
+ ⋮</code></pre>
+<p>Finally, I iterated through this array and composed searches, using the <a href="https://github.com/BioJulia/BioServices.jl"><code>BioServices.EUtils</code></a> package to do the search and retrieval.</p>
+<pre><code class="language-julia">using BioServices.EUtils
+
+for s in searches
+    # If you do too many queries in a row, esearch raises an exception.
+    # The solution is to pause &#40;here for 10 sections&#41; and then try again.
+    try
+        res &#61; esearch&#40;db&#61;&quot;pubmed&quot;, term&#61;&quot;&#40;&#36;&#40;s<a href="https://icsugendergapinscience.org/work-packages/publication-patterns/">1</a>&#41; &#91;title&#93;&#41; AND &#40;&#36;&#40;s<a href="https://doi.org/10.1371/journal.pcbi.1005134">2</a>&#41; &#91;author&#93;&#41; AND &#40;&#36;&#40;s<a href="http://julialang.org">3</a>&#41; &#91; journal&#93;&#41; AND &#40;&#36;&#40;s<a href="https://regexr.com/">4</a>&#41; &#91;pdat&#93;&#41;&quot;&#41;
+    catch
+        sleep&#40;10&#41;
+        res &#61; esearch&#40;db&#61;&quot;pubmed&quot;, term&#61;&quot;&#40;&#36;&#40;s<a href="https://icsugendergapinscience.org/work-packages/publication-patterns/">1</a>&#41; &#91;title&#93;&#41; AND &#40;&#36;&#40;s<a href="https://doi.org/10.1371/journal.pcbi.1005134">2</a>&#41; &#91;author&#93;&#41; AND &#40;&#36;&#40;s<a href="http://julialang.org">3</a>&#41; &#91; journal&#93;&#41; AND &#40;&#36;&#40;s<a href="https://regexr.com/">4</a>&#41; &#91;pdat&#93;&#41;&quot;&#41;
+    end
+
+
+    doc &#61; parsexml&#40;res.data&#41;
+    #&#61; this returns an array of pmids, since in the xml, they&#39;re separated by
+    newlines. The &#96;strip&#96; function removes leading and trailing newlines, but
+    not ones in between ids. &#61;#
+    i &#61; split&#40;content&#40;findfirst&#40;doc, &quot;//IdList&quot;&#41;&#41; |&gt; strip, &#39;\n&#39;&#41;
+
+    if length&#40;i&#41; &#61;&#61; 1
+        #&#61; if no ids are returned, there&#39;s an array with just an empty string,
+        in which case I add 0 to the array &#61;#
+        length&#40;i<a href="https://icsugendergapinscience.org/work-packages/publication-patterns/">1</a>&#41; &#61;&#61; 0 ? push&#33;&#40;pmids, 0&#41; : push&#33;&#40;pmids, parse&#40;Int, i<a href="https://icsugendergapinscience.org/work-packages/publication-patterns/">1</a>&#41;&#41;
+    else
+        # if there are more than 1 pmids returned, I just add 9 to the array
+        push&#33;&#40;pmids, 9&#41;
+    end
+end</code></pre>
+<p>I actually did better than the last time I tried this - 2447 records associated with only 1 pmid. 13 of the searches had more than 1 pmid, and the rest &#40;744&#41; didn&#39;t return any hits.</p>
+<pre><code class="language-julia">@show sum&#40;pmids .&gt; 9&#41;
+@show sum&#40;pmids .&#61;&#61; 9&#41;
+@show sum&#40;pmids .&#61;&#61; 0&#41;</code></pre>
+<pre><code class="language-julia">sum&#40;pmids .&gt; 9&#41; &#61; 2447
+sum&#40;pmids .&#61;&#61; 9&#41; &#61; 13
+sum&#40;pmids .&#61;&#61; 0&#41; &#61; 744</code></pre>
+<p>I added the ids to the dataframe and saved it as a new file &#40;so I don&#39;t have to do the searching again&#41;. Since I have the urls for many of the papers, I was thinking I could try to identify the doi&#39;s associated with them from their webpages, but that will have to wait until another time.</p>
+<p>For now, the last step is to save it as a csv and send it off to Lucia:</p>
+<pre><code class="language-julia">CSV.write&#40;&quot;data/withpmids.csv&quot;, df&#41;</code></pre>
+<p><table class="fndef" id="fndef:c90d47d1">
+    <tr>
+        <td class="fndef-backref"><a href="#fnref:c90d47d1">[2]</a></td>
+        <td class="fndef-content">I should note that in the version Filardo et. al. originally sent me, this was waaaay more heterogeneous. Some things had <code>et. all.</code> or <code>et al</code>, the years weren&#39;t always in parentheses etc. I did a lot of manual curration before it got to this point.</td>
+    </tr>
+</table>
+ </p>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+     <script src="/libs/highlight/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();hljs.configure({tabReplace: '    '});</script>
+ 
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

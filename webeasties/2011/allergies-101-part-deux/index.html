@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Allergies 101 - Part deux</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Allergies 101 - Part deux</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>Earlier this week, <a href="http://scienceblogs.com/webeasties/2011/11/&#91;allergies&#93;&#40;/tag/allergies&#41;_101.php">I wrote a little bit</a> about what causes allergic symptoms - your immune system confuses pollen &#40;or some other allergen&#41; for a worm, and then arms your granulocytic grenades to explode every time you come into contact with it. But why does this confusion happen? This is a bit more complicated.</p>
+<p>As I mentioned in the first post, the immune system broadly speaking is geared for 3 types of infections:</p>
+<ol>
+<li><p>Intracellular - these pathogens &#40;all viruses and some bacteria like Listeria&#41; live most or all of their life inside our own cells. In order to deal with them, the immune system needs to be able to identify and kill infected cells, while preventing new cells from becoming infected.</p>
+</li>
+<li><p>Small extracellular - These pathogens &#40;mostly bacteria, some fungi&#41; live outside of cells. They are small enough to be eaten by phagocytes, but often reproduce very quickly and produce toxins that can kill or manipulate healthy cells.</p>
+</li>
+<li><p>Large extracellular - Pathogens like worms can&#39;t be eaten by our own cells, and they can&#39;t be neutralized with antibodies. They only way to deal with them is to make their living environment terrible and try to flush them from the body.</p>
+</li>
+</ol>
+<p>The control over these different programs is mediated by a range of signaling molecules called &quot;cytokines,&quot; which are secreted by different types of immune cells. Say you&#39;re riding the subway and some jerk doesn&#39;t cover their mouth when they cough - you now have viruses in your airways. Infected cells will recognize they are infected and release cytokine cocktail Ai &#40;infected&#41;. At the same time, professional phagocytes like dendritic cells and macrophages will recognize the presence of virus even if they themselves aren&#39;t infected &#40;largely through Toll-like Receptors&#41;, and release cytokine cocktail Ap &#40;phagocyte&#41;. Some of those dendritic cells will scurry off to neighboring lymph nodes and call in the big guns - helper T-cells will get activated and run the show from then on, releasing boatloads of cytokine cocktail At, directing B-cell development and so on. </p>
+<p>The details of what&#39;s in each of these cytokine cocktails isn&#39;t super important, and there&#39;s a lot of overlap, but the key thing to understand is that the specific cytokine cocktail A &#40;for viruses and other intracellular pathogens&#41; is different from cocktail B &#40;for worms&#41; and cocktail C &#40;for small extracellular pathogens&#41;. The T helper cells that develop in response to these different cytokine cocktails have been extensively studied, and are called Th1 &#40;for , Th2 and Th17 respectively &#40;don&#39;t ask what happened to Th3-16&#41;. Immunology aficionados will know that this is grossly simplified, but bear with me.</p>
+<p>We know a lot about how these T cells choose their fate. For Th1 cells, for instance, we know that a cytokine called IL-12 is particularly important for inducing Th1&#39;s, and that Th1 cells then produce a lot of a cytokine called interferon gamma &#40;IFNÎ³&#41;. IL-12 is made by macrophages and especially dendritic cells in response to various TLR ligands, so the connection is pretty clear. For Th2&#39;s, the trouble T-cells in allergies, it&#39;s a little less clear.</p>
+<p>We know that the cytokine IL-4 is really important for Th2&#39;s. Th2&#39;s themselves produce a lot of IL-4, but for a long time it was thought that IL-4 was also needed to induce Th2 development &#40;if you put naÃ¯ve T-cells in a dish with IL-4, they will become Th2&#41;. But this lead to a bit of a chicken-egg question. Macrophages and dendritic cells don&#39;t make IL-4, and it was thought that whatever the source of the cytokine, it would have to be a professional antigen presenting cell. For a long time, immunologists thought that Th2 was sort of a default pathway, that T-cells would develop into in the absence of other signals. Recently, a number of groups published some evidence that a particular type of granulocyte called a basophil could make IL-4, could present antigen to T-cells and were necessary for Th2 development, but several labs are disputing this finding.</p>
+<p>My classmate and former roommate is actually working on a project that addresses this question much more directly, and he&#39;s got some awesome data that unfortunately I can&#39;t share with you because I can&#39;t risk his competitors finding out what he&#39;s discovered. I promise to blog the crap out of his paper when it&#39;s published.</p>
+<p>But an even more basic question is how the immune system recognizes what types of pathogens &#40;and by mistake, what type of allergens&#41; should induce a Th2 response. For viruses and bacteria, the last 15 years have seen the discovery of a plethora of innate receptors that specifically recognize bacterial and viral patterns, and cause the release of various cytokine cocktails, but no one has ever convincingly shown a receptor that can recognize worms.  The key to understanding this recognition may actually come from understanding what sorts of things make potent allergens. That similarity, and the importance of papayas in studying allergies, <a href="http://scienceblogs.com/webeasties/2011/12/allergies_101_part_the_third.php">coming up</a>.</p>
+<h2>Post Images</h2>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>

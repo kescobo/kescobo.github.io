@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="author" content="Kevin S. Bonham">
+  <meta name="description" content="Senior Research Scientist">
+
+  <meta name="theme-color" content="#2962ff">
+
+  <link
+  rel=preconnect
+  href="https://fonts.gstatic.com"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css"
+  crossorigin=anonymous>
+
+<link
+  rel=stylesheet
+  href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap"
+  crossorigin=anonymous>
+
+<!-- locally served -->
+<link rel=stylesheet href="/libs/academic/academic.min.css">
+
+<link rel=stylesheet href="/css/extra.css">
+<link rel=stylesheet href="/css/custom.css">
+
+<!-- highlight + katex + plotly -->
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin=anonymous async></script>
+
+   <title>Immune Response from Start to Finish: Part 2</title>  
+</head>
+
+<body id=top data-spy="scroll" data-offset="70" data-target=#navbar-main>
+
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+  <div class=container>
+    <!-- Main name -->
+    <div class="d-none d-lg-inline-flex">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Button for narrow mode -->
+    <button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+    </button>
+    <!-- Main name for mobile mode -->
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class=navbar-brand href="/">K. Bonham</a>
+    </div>
+    <!-- Menu items -->
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+      <ul class="navbar-nav d-md-inline-flex">
+        <li class=nav-item><a class=nav-link href="/#posts" data-target=#posts><span>Recent posts</span></a></li>
+        <li class=nav-item><a class=nav-link href="/posts/"><span>Blog</span></a></li>
+        <li class=nav-item><a class=nav-link href="/courses/"><span>Courses</span></a></li>
+        <li class=nav-item><a class=nav-link href="/research/"><span>Research</span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <span class="js-widget-page d-none"></span>
+
+  
+    <article class=article>
+      <div class="article-container pt-3">
+        <h1>Immune Response from Start to Finish: Part 2</h1>
+      </div>
+      
+
+      <div class="article-container">
+        <div class="article-style">
+  
+<div class="franklin-content">
+<p><em>This post initially appeared on <a href="http://scienceblogs.com/webeasties">Science Blogs</a></em></p>
+<p>&#91;I&#39;ve been hooked on the immune system since I was a kid and my dad showed me electron micrographs of macrophages eating bacteria in Scientific American. Now that I&#39;m in graduate school studying immunology, and macrophages in particular, <a href="http://webeasties.wordpress.com/2010/05/26/pattern-recognition-and-innate-immunity/#comment-124">my dad asked</a> if I could give a play-by-play of an immune response. Here you go Dad:&#93;</p>
+<p>Part 2: T-cells, B-cells and <a href="/tag/adaptive-immunity">adaptive immunity</a></p>
+<p>If you&#39;ve ever had the flu &#40;and I mean for real influenza, not some sissy <a href="http://en.wikipedia.org/wiki/Man_flu">man-flu</a>&#41;, you know how much it sucks. But don&#39;t blame the virus. Many of the most unpleasant symptoms - extreme fatigue, snot-filled sinuses, and high fever - are all a result of your immune system trying to kill that nasty infection &#40;ok, I guess you can blame the virus&#41;. <a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_1.php">In part 1</a>, I described how the innate immune system usually blocks bugs from getting in, or kills them quite rapidly. That fever is a result of all the cytokines released by the macrophages and other immune cells &#40;higher body temperatures are thought to speed up the immune response or make the environment less hospitable to the pathogens&#41;. That snot is mostly comprised of mucous secreted by the inflamed tissues of the nose, and dead neutrophils that swarmed in kamikazi-style to gobble up whatever bacteria or virus they could find. That fatigue is an attempt to conserve energy that might be needed to fight the infection. Most of the time, the innate immune system does a pretty good job on its own. But if you get to the point where you can&#39;t breathe through your nose, it&#39;s a struggle just to sit up in bed and you could fry an egg on your stomach, your innate immune system just isn&#39;t enough. That&#39;s where the adaptive immune system comes in.</p>
+<p>Dendritic cells: the tissue&#39;s messengers</p>
+<p>Most tissues in your body contain specialized cells called dendritic cells &#40;DC&#39;s&#41; which form the bridge between the innate and the adaptive immune system. DC&#39;s are constantly sampling their immediate environment through a process called macropinocytosis - which means literally &quot;big drinking.&quot; They are constantly enveloping fluid and molecules with their cell membranes and drawing it in to process and digest it. Most of the time, the DC doesn&#39;t see anything particularly surprising - mostly debris from dead or dying cells, secreted hormones and other signaling molecules, and extracellular matrix proteins. But during an infection, the DC will see a PAMP &#40;that&#39;s pathogen-associated molecular pattern that I talked about last time&#41;, or get a signal from cytokines released by another immune cell &#40;like a macrophage&#41; that saw one. In either case, the DC becomes activated, and stops macropinocytosis, essentially preserving a snap-shot of the local molecular environment.</p>
+<p>Lymphatics are the immune system&#39;s highway</p>
+<p>The next stage of the immune response occurs when the DC picks up stakes and heads for a <a href="http://en.wikipedia.org/wiki/Lymph_node">lymph node</a>. The lymphatic system is not something most people think of, but it&#39;s essential for the immune system. It&#39;s almost like a parallel circulatory system, but it carries tissue fluid around the body instead of blood. It also doesn&#39;t have a pump like the heart, but is instead moved around by normal body movement &#40;this is why people confined to beds need to be continually moved or massaged, otherwise fluid pools in the extremities&#41;. Anyway, DC&#39;s travel along the lymphatics until they find the nearest lymph node. This is where the magic happens.</p>
+<p>T-cells and B-cells</p>
+<p>Lymph nodes are the home of specialized cells called T-cells and B-cells. T- and B-cells undergo a unique process in which their DNA at a particular location is cut up and scrambled to generate a receptor that is completely unique, and can be almost infinitely diverse. As a result, T-cell receptors &#40;TCR&#41; and B-cell receptors &#40;BCR&#41; are capable of recognizing just about anything, but each individual cell has a unique receptor that is incredibly specific. In other words, in contrast to a macrophage, which might recognize all bacteria in a very general way, an individual T-cell might only recognize a single strain of a single species of bacteria, while another T-cell would be blind to that strain, but recognize another related strain. When the dendritic cell from an infected tissue arrives at the lymph node, carrying with it the bits of microbe &#40;called antigens&#41; that it found when it was activated, most T-cells and B-cells will ignore it. Because of the huge diversity in their receptors, the chance that any given T-cell or B-cell will recognize something from a particular bug is quite small.</p>
+<p>But there are a lot of these cells living in the lymph node, and if even one is able to see that DC and its cargo, it goes nuts. Combining signals that it receives through its own receptor, as well and signals given off by the dendritic cell, the T-cell or B-cell will start to proliferate, cloning itself &#40;and the unique receptor it has&#41; thousands or hundreds of thousands of times. As they proliferate, B-cells start to randomly modify their receptor, and undergo a mini process of natural selection. Most of the modifications are useless or even destructive, and cause the B-cell to decrease in its ability to recognize the antigen. When this happens, the B-cell can&#39;t receive the activating signals any more and will die off. As with evolution, however, some of these changes will be beneficial, and increase the B-cell&#39;s recognition. These lucky B-cells will get stronger signals, and will proliferate more. Eventually, B-cells will turn their receptor &#40;that&#39;s bound to the surface of the cell&#41; into a secreted form called an antibody, which they produce in huge numbers. All these antibodies will head to the site of infection and patrol the blood stream, glomming onto the pathogen wherever it&#39;s found, neutralizing them &#40;in the case of viruses and toxins&#41; or making it easier for macrophages to see and eat them &#40;in the case of larger things like bacteria&#41;. Antibodies can also cause <a href="http://en.wikipedia.org/wiki/Complement_system">complement fixation,</a> which punches holes in bacteria and causes them to explode.</p>
+<p>Antibodies are great for stuff that&#39;s happening outside of your cells, but many infections &#40;including ALL virus infections&#41; happen inside cells where antibodies can&#39;t get to. That&#39;s where T-cells come in &#40;there are lots of different T-cells that do lots of different things, but I&#39;m only going to focus on &quot;killer&quot; T-cells&#41;. Cells are constantly presenting bits of the proteins they express on their cell surface for T-cells to look at. Under normal conditions, T-cells will never see anything other than normal, self proteins, and nothing will happen. But in the case of a virus infection, for instance, viral proteins will also be presented. When a T-cell gets activated in the lymph node, it will head into the blood stream and then migrate to the site of the infection. When it gets there, any cells that are expressing foreign proteins that the T-cell recognizes will trigger the T-cell to release signals that force the infected cell to commit suicide. Any pathogens that survive will hopefully get mopped up by antibodies.</p>
+<p>This whole process, from infection, to T- and B-cell activation, to clearance of the pathogen and resolution of the immune response usually takes 1-2 weeks. If you have a cold, you may only have symptoms for a couple days but that&#39;s only the part that you notice. In reality, your immune system spends a lot of time working behind the scenes to keep you free and clear. In the next section, I&#39;ll talk about immunological memory, vaccines, and the pesky problem of persistent pathogens.</p>
+<p>Immune response from start to finish series<a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to_1.php/">Part 1: Invasion and detection: Innate immunity</a></p>
+<p>Part 2: T-cells, B-cells and adaptive immunity &#40;current&#41;<a href="http://scienceblogs.com/webeasties/2010/11/immune_response_from_start_to.php">Part 3: Immune Memory</a><a href="http://scienceblogs.com/webeasties/2010/11/implications_of_the_immune_res.php">Implications of the Immune Response</a></p>
+<p>&#91;NOTE: Because this post is now a magnet for spam, commenting has been closed. If you want to leave a comment, please send it to me via e-mail: webeastiesblog &#40;at&#41; gmail.com&#93;</p>
+
+</div> <!-- article style -->
+
+
+<div class="container">
+  <footer class="site-footer">
+    <p class="powered-by">Built with <a href="https://franklinjl.org" target="_blank" rel="noopener">Franklin.jl</a> and the <a href="https://julialang.org" target="_blank" rel="noopener">Julia Programming Language</a>.
+
+      <span class="float-right" aria-hidden="true">
+        <a href="#" class="back-to-top">
+          <span class="button_icon">
+            <i class="fas fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+    </p>
+  </footer>
+</div>
+</div>
+  </div> <!--article container -->
+</article>
+
+
+<!-- CONTENT ENDS HERE -->
+    
+    
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+
+  <script src="/libs/academic/academic.min.js"></script>
+
+  </body>
+</html>
