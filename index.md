@@ -154,17 +154,17 @@ Responsibilities:
      RECENT POSTS SECTION
      -------------------- -->
 
-\begin{section}{name="posts", class="wg-pages"}
+<!-- \begin{section}{name="posts", class="wg-pages"} -->
 
-\sectionheading{"Recent Posts", class="col-12 col-lg-4"}
+<!-- \sectionheading{"Recent Posts", class="col-12 col-lg-4"} -->
 
-@@col-12,col-lg-8
+<!-- @@col-12,col-lg-8 -->
 
-{{recentposts 5}}
+<!-- {{recentposts 5}} -->
 
-@@
+<!-- @@ -->
 
-\end{section}
+<!-- \end{section} -->
 
 <!-- -----------------
      PORTFOLIO SECTION XXX
