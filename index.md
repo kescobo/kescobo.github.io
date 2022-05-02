@@ -25,7 +25,7 @@
 <!-- RIGHT COLUMN -->
 @@col-12,col-lg-8
 
-\begin{biography}{resume="/assets/CV.pdf"}
+\begin{biography}{resume="https://gitlab.com/kescobo/cv/-/raw/main/CV.pdf?inline=false"}
   Kevin Bonham is a Senior Research Scientist at Wellesley College,
   studying the human microbiome and its impact on childhood cognitive development.
   In collaboration with Curtis Huttenhower, he is also developing a computational tool
