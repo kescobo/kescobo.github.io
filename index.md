@@ -16,7 +16,7 @@
   link="https://www.wellesley.edu",
   linkname="Wellesley College",
   twitter="https://twitter.com/kevbonham",
-  gscholar="https://scholar.google.co.uk/citations?user=o2fUiqwAAAAJ",
+  gscholar="https://scholar.google.com/citations?user=o2fUiqwAAAAJ",
   github="https://github.com/kescobo",
   linkedin="https://www.linkedin.com/in/kevin-bonham-6a10b566"
 }
